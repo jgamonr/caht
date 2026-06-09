@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mensajeria con documentos</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17211f;
+        --muted: #66746f;
+        --line: #dce6e1;
+        --panel: #f8fbf9;
+        --panel-strong: #edf5f1;
+        --brand: #158264;
+        --brand-deep: #0c5e4a;
+        --bubble: #d9fdd3;
+        --white: #ffffff;
+        --shadow: 0 18px 48px rgba(24, 48, 40, .16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #17886a 0 128px, #e6eee9 128px 100%);
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      .app-shell {
+        width: min(1180px, calc(100vw - 28px));
+        height: min(820px, calc(100vh - 28px));
+        margin: 14px auto;
+        display: grid;
+        grid-template-columns: 330px minmax(0, 1fr);
+        overflow: hidden;
+        background: var(--white);
+        border: 1px solid rgba(255, 255, 255, .6);
+        box-shadow: var(--shadow);
+      }
+
+      .sidebar {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        min-width: 0;
+        background: var(--panel);
+        border-right: 1px solid var(--line);
+      }
+
+      .profile,
+      .chat-header {
+        min-height: 74px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 16px;
+        background: var(--panel-strong);
+      }
+
+      .profile h1,
+      .chat-header h2 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .profile p,
+      .chat-header p,
+      .chat-item small {
+        margin: 4px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .avatar,
+      .chat-avatar {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        color: white;
+        background: linear-gradient(135deg, #18896b, #255a9b);
+        font-weight: 700;
+      }
+
+      .chat-avatar.large {
+        width: 46px;
+        height: 46px;
+      }
+
+      .name-field {
+        display: grid;
+        gap: 8px;
+        padding: 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .name-field span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .name-field input {
+        width: 100%;
+        min-height: 42px;
+        padding: 0 12px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: var(--ink);
+        background: white;
+        outline-color: var(--brand);
+      }
+
+      .chat-list {
+        padding: 10px;
+      }
+
+      .chat-item {
+        width: 100%;
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px;
+        border: 0;
+        border-radius: 6px;
+        color: var(--ink);
+        background: #e7f0eb;
+        text-align: left;
+      }
+
+      .conversation {
+        min-width: 0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        background:
+          linear-gradient(rgba(239, 233, 222, .72), rgba(239, 233, 222, .72)),
+          radial-gradient(circle at 14px 14px, rgba(21, 130, 100, .16) 1px, transparent 1px);
+        background-size: auto, 28px 28px;
+      }
+
+      .chat-header {
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .chat-title {
+        min-width: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .status-pill {
+        flex: 0 0 auto;
+        padding: 7px 10px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, .72);
+        font-size: 12px;
+      }
+
+      .messages {
+        min-height: 0;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 22px 26px;
+      }
+
+      .message {
+        max-width: min(620px, 78%);
+        align-self: flex-start;
+        padding: 10px 12px 8px;
+        border-radius: 7px;
+        background: white;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+      }
+
+      .message.mine {
+        align-self: flex-end;
+        background: var(--bubble);
+      }
+
+      .message.system {
+        align-self: center;
+        max-width: 92%;
+        padding: 8px 12px;
+        border-radius: 999px;
+        color: var(--muted);
+        background: rgba(255, 255, 255, .75);
+        font-size: 13px;
+      }
+
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+
+      .text {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        line-height: 1.42;
+      }
+
+      .attachment {
+        display: grid;
+        grid-template-columns: 38px minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+        padding: 9px;
+        border: 1px solid rgba(12, 94, 74, .16);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, .58);
+      }
+
+      .doc-icon {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 6px;
+        color: white;
+        background: #255a9b;
+      }
+
+      .attachment strong,
+      .attachment small {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .attachment small {
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      .download-link {
+        padding: 8px 10px;
+        border-radius: 6px;
+        color: white;
+        background: var(--brand);
+        text-decoration: none;
+        font-size: 13px;
+      }
+
+      .composer {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr) 44px;
+        align-items: end;
+        gap: 10px;
+        padding: 12px 16px;
+        background: var(--panel-strong);
+        border-top: 1px solid var(--line);
+      }
+
+      .icon-button,
+      .send-button {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .icon-button {
+        color: var(--muted);
+        background: transparent;
+      }
+
+      .send-button {
+        color: white;
+        background: var(--brand);
+      }
+
+      svg {
+        width: 22px;
+        height: 22px;
+        fill: currentColor;
+      }
+
+      .input-wrap {
+        min-height: 44px;
+        display: grid;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border-radius: 8px;
+        background: white;
+      }
+
+      .file-chip {
+        width: fit-content;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 7px 5px 10px;
+        border-radius: 999px;
+        color: var(--brand-deep);
+        background: #e1f3ee;
+        font-size: 13px;
+      }
+
+      .file-chip span {
+        max-width: 44vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .file-chip button {
+        width: 20px;
+        height: 20px;
+        border: 0;
+        border-radius: 50%;
+        color: var(--brand-deep);
+        background: rgba(12, 94, 74, .12);
+        cursor: pointer;
+      }
+
+      textarea {
+        width: 100%;
+        max-height: 120px;
+        resize: none;
+        border: 0;
+        outline: 0;
+        color: var(--ink);
+      }
+
+      @media (max-width: 760px) {
+        body {
+          background: var(--panel-strong);
+        }
+
+        .app-shell {
+          width: 100vw;
+          height: 100vh;
+          margin: 0;
+          grid-template-columns: 1fr;
+          border: 0;
+        }
+
+        .sidebar {
+          display: none;
+        }
+
+        .chat-header p,
+        .status-pill {
+          display: none;
+        }
+
+        .messages {
+          padding: 16px 12px;
+        }
+
+        .message {
+          max-width: 88%;
+        }
+
+        .attachment {
+          grid-template-columns: 34px minmax(0, 1fr);
+        }
+
+        .download-link {
+          grid-column: 1 / -1;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Conversaciones">
+        <div class="profile">
+          <div class="avatar" aria-hidden="true">M</div>
+          <div>
+            <h1>Mensajeria</h1>
+            <p>Publicable en HTML</p>
+          </div>
+        </div>
+
+        <label class="name-field">
+          <span>Tu nombre</span>
+          <input id="authorInput" maxlength="40" autocomplete="name" placeholder="Invitado">
+        </label>
+
+        <section class="chat-list" aria-label="Lista de chats">
+          <button class="chat-item" type="button">
+            <span class="chat-avatar">G</span>
+            <span>
+              <strong>General</strong>
+              <small>Mensajes y documentos</small>
+            </span>
+          </button>
+        </section>
+      </aside>
+
+      <section class="conversation" aria-label="Chat general">
+        <header class="chat-header">
+          <div class="chat-title">
+            <span class="chat-avatar large">G</span>
+            <div>
+              <h2>General</h2>
+              <p>Comparte texto, PDF, imagenes, hojas y documentos.</p>
+            </div>
+          </div>
+          <div class="status-pill" id="messageCount">0 mensajes</div>
+        </header>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+
+        <form class="composer" id="composer">
+          <input id="fileInput" type="file" hidden>
+          <button class="icon-button" id="attachButton" type="button" aria-label="Adjuntar documento" title="Adjuntar documento">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 11.6 12.1 20.9a6 6 0 0 1-8.5-8.5l9.7-9.7a4.2 4.2 0 0 1 5.9 5.9l-9.8 9.8a2.4 2.4 0 0 1-3.4-3.4l8.7-8.7 1.4 1.4-8.7 8.7a.4.4 0 0 0 .6.6l9.8-9.8a2.2 2.2 0 0 0-3.1-3.1L5 13.8a4 4 0 1 0 5.7 5.7l9.3-9.3 1.4 1.4Z"/></svg>
+          </button>
+          <div class="input-wrap">
+            <div class="file-chip" id="fileChip" hidden>
+              <span id="fileName"></span>
+              <button id="clearFile" type="button" aria-label="Quitar documento">x</button>
+            </div>
+            <textarea id="messageInput" rows="1" placeholder="Escribe un mensaje"></textarea>
+          </div>
+          <button class="send-button" type="submit" aria-label="Enviar" title="Enviar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 20.4 22 12 3.4 3.6 3 10.1l11 1.9-11 1.9.4 6.5Z"/></svg>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const storageKey = "mensajeria-publicable";
+      const state = {
+        author: localStorage.getItem("chat-author") || "Invitado",
+        file: null,
+        messages: JSON.parse(localStorage.getItem(storageKey) || "[]")
+      };
+
+      if (!state.messages.length) {
+        state.messages.push({
+          id: crypto.randomUUID(),
+          type: "system",
+          text: "Chat listo. Esta version HTML guarda mensajes solo en este navegador.",
+          createdAt: new Date().toISOString()
+        });
+      }
+
+      const messagesEl = document.querySelector("#messages");
+      const composer = document.querySelector("#composer");
+      const messageInput = document.querySelector("#messageInput");
+      const authorInput = document.querySelector("#authorInput");
+      const fileInput = document.querySelector("#fileInput");
+      const attachButton = document.querySelector("#attachButton");
+      const fileChip = document.querySelector("#fileChip");
+      const fileName = document.querySelector("#fileName");
+      const clearFile = document.querySelector("#clearFile");
+      const messageCount = document.querySelector("#messageCount");
+
+      authorInput.value = state.author;
+
+      function save() {
+        localStorage.setItem(storageKey, JSON.stringify(state.messages));
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        })[char]);
+      }
+
+      function formatTime(iso) {
+        return new Intl.DateTimeFormat("es-MX", {
+          hour: "2-digit",
+          minute: "2-digit"
+        }).format(new Date(iso));
+      }
+
+      function formatBytes(bytes) {
+        if (!bytes) return "0 B";
+        const units = ["B", "KB", "MB", "GB"];
+        const index = Math.min(Math.floor(Math.log(bytes) / Math.log(1024)), units.length - 1);
+        return `${(bytes / 1024 ** index).toFixed(index ? 1 : 0)} ${units[index]}`;
+      }
+
+      function renderMessages() {
+        messagesEl.innerHTML = state.messages.map((message) => {
+          if (message.type === "system") {
+            return `<article class="message system">${escapeHtml(message.text)}</article>`;
+          }
+
+          const attachment = message.attachment ? `
+            <a class="attachment" href="${message.attachment.data}" download="${escapeHtml(message.attachment.name)}">
+              <span class="doc-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6V2Zm7 1.8V8h4.2L13 3.8ZM8 13h8v-2H8v2Zm0 4h8v-2H8v2Z"/></svg>
+              </span>
+              <span>
+                <strong>${escapeHtml(message.attachment.name)}</strong>
+                <small>${formatBytes(message.attachment.size)}</small>
+              </span>
+              <span class="download-link">Descargar</span>
+            </a>
+          ` : "";
+
+          return `
+            <article class="message mine">
+              <div class="meta">
+                <strong>${escapeHtml(message.author)}</strong>
+                <span>${formatTime(message.createdAt)}</span>
+              </div>
+              ${message.text ? `<div class="text">${escapeHtml(message.text)}</div>` : ""}
+              ${attachment}
+            </article>
+          `;
+        }).join("");
+
+        const total = state.messages.filter((message) => message.type !== "system").length;
+        messageCount.textContent = `${total} ${total === 1 ? "mensaje" : "mensajes"}`;
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+      }
+
+      function autoresize() {
+        messageInput.style.height = "auto";
+        messageInput.style.height = `${Math.min(messageInput.scrollHeight, 120)}px`;
+      }
+
+      function fileToBase64(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function setFile(file) {
+        state.file = file;
+        fileChip.hidden = !file;
+        fileName.textContent = file ? file.name : "";
+      }
+
+      authorInput.addEventListener("input", () => {
+        state.author = authorInput.value.trim() || "Invitado";
+        localStorage.setItem("chat-author", state.author);
+      });
+
+      messageInput.addEventListener("input", autoresize);
+
+      messageInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          composer.requestSubmit();
+        }
+      });
+
+      attachButton.addEventListener("click", () => fileInput.click());
+
+      fileInput.addEventListener("change", () => {
+        const [file] = fileInput.files;
+        if (file && file.size > 5 * 1024 * 1024) {
+          alert("En esta version HTML el documento debe pesar 5 MB o menos.");
+          fileInput.value = "";
+          return;
+        }
+        setFile(file || null);
+      });
+
+      clearFile.addEventListener("click", () => {
+        fileInput.value = "";
+        setFile(null);
+      });
+
+      composer.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const text = messageInput.value.trim();
+        if (!text && !state.file) return;
+
+        const message = {
+          id: crypto.randomUUID(),
+          type: "message",
+          author: state.author,
+          text,
+          attachment: null,
+          createdAt: new Date().toISOString()
+        };
+
+        if (state.file) {
+          message.attachment = {
+            name: state.file.name,
+            size: state.file.size,
+            data: await fileToBase64(state.file)
+          };
+        }
+
+        state.messages.push(message);
+        save();
+        renderMessages();
+        messageInput.value = "";
+        autoresize();
+        fileInput.value = "";
+        setFile(null);
+      });
+
+      renderMessages();
+    </script>
+  </body>
+</html>
