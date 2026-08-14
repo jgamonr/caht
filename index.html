@@ -253,6 +253,7 @@
   const STAFF_KEY = "ventanilla_responsable_v1";
   const SYNC_CHANNEL_KEY = "ventanilla_documentos_sync_v1";
   const SERVICE_ENDPOINT_KEY = "ventanilla_email_webhook_v1";
+  const DEFAULT_SERVICE_ENDPOINT = "https://script.google.com/macros/s/AKfycbxhzA5MaOwF2hsLYgBC3aC8BRUaMzK4niVHqvKtR9FQcg0Szz445wLUx4rd5u4vp5-v/exec";
   const SHEETS_ADMIN_KEY = "ventanilla_sheets_admin_key_v1";
   const SPREADSHEET_ID = "1f0Z8w8ZTA7Let9NJkdjYzXXa0-PvRKAXplLbSkZoIZ8";
   const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit`;
@@ -527,7 +528,7 @@ function escapeHtml_(value) {
   function statusPill(status){return `<span class="status-pill ${status}"><i></i>${STATUS_SHORT[status]||status}</span>`}
   function rowActionButton(record){const actions={registrado:{label:"Recibir",next:"recibido",className:"primary",icon:"inbox"},recibido:{label:"Marcar listo",next:"listo",className:"ready",icon:"package"},listo:{label:"Entregar",next:"entregado",className:"deliver",icon:"check"}},action=actions[record.status];if(!action)return `<button type="button" class="row-action completed" data-no-row aria-disabled="true">${icon("check")} Finalizado</button>`;return `<button type="button" class="row-action ${action.className}" data-advance="${record.folio}" data-next-status="${action.next}">${icon(action.icon)} ${action.label}</button>`}
   function showToast(message,type="success"){const el=document.createElement("div");el.className=`toast ${type}`;el.innerHTML=`<span class="toast-dot"></span><span>${escapeHtml(message)}</span>`;$("#toast-region").append(el);setTimeout(()=>el.remove(),2700)}
-  function serviceEndpoint(){return localStorage.getItem(SERVICE_ENDPOINT_KEY)||""}
+  function serviceEndpoint(){const saved=localStorage.getItem(SERVICE_ENDPOINT_KEY)||"";return validServiceEndpoint(saved)?saved:DEFAULT_SERVICE_ENDPOINT}
   function sheetsAdminKey(){return localStorage.getItem(SHEETS_ADMIN_KEY)||""}
   function validServiceEndpoint(value){try{const url=new URL(String(value||"").trim());return url.protocol==="https:"&&url.hostname==="script.google.com"&&/^\/macros\/s\/[^/]+\/exec$/.test(url.pathname)}catch{return false}}
   function validAdminKey(value){return /^[A-Za-z0-9_-]{24,120}$/.test(String(value||"").trim())}
