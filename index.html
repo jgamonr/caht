@@ -41,8 +41,8 @@
 
     /* home */
     #view-home{overflow:hidden;background:radial-gradient(circle at 86% 13%,rgba(8,127,120,.1),transparent 28%),linear-gradient(180deg,#fffefb 0,#fffefb 74%,#f8f6f0 100%)}
-    .hero{min-height:610px;display:grid;grid-template-columns:1fr 420px;gap:84px;align-items:center;padding:52px 0 76px}
-    .hero-copy{max-width:660px}
+    .hero{min-height:540px;display:flex;align-items:center;padding:52px 0 76px}
+    .hero-copy{max-width:780px}
     .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--teal);font-size:11px;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
     .eyebrow:before{content:"";width:28px;height:2px;border-radius:3px;background:var(--teal)}
     .hero h1{margin:22px 0;font-size:clamp(48px,6vw,76px);line-height:.99;letter-spacing:-.057em;font-weight:720}
@@ -59,20 +59,8 @@
     .btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
     .trust-row{display:flex;gap:24px;margin-top:30px;color:#637985;font-size:12px;font-weight:680}
     .trust-row span{display:inline-flex;align-items:center;gap:7px}.trust-row .icon{color:var(--teal)}
-    .home-qr-card{position:relative;background:#fff;border:1px solid rgba(18,50,74,.1);border-radius:28px;padding:22px 26px 0;text-align:center;box-shadow:var(--shadow);transform:rotate(1deg)}
-    .home-qr-card:before{content:"";position:absolute;inset:12px -12px -12px 12px;border-radius:28px;background:var(--mint);z-index:-1}
-    .qr-card-top{display:flex;align-items:center;justify-content:space-between}
-    .qr-step{color:#afbec3;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11px;font-weight:800}
     .live-pill{display:inline-flex;align-items:center;gap:7px;background:#eff8f5;color:#11736d;border-radius:999px;padding:7px 10px;font-size:8px;font-weight:900;letter-spacing:.1em}
     .live-pill i{width:7px;height:7px;background:#21a66f;border-radius:50%;box-shadow:0 0 0 4px rgba(33,166,111,.12)}
-    .qr-frame{position:relative;width:min(258px,76vw);aspect-ratio:1;margin:18px auto 16px;padding:8px;background:#fff;display:grid;place-items:center}
-    .qr-frame img,.qr-frame canvas{display:block!important;width:100%!important;height:100%!important}
-    .qr-loading{width:100%;height:100%;border-radius:12px;background:linear-gradient(110deg,#eef2f2 25%,#fafafa 38%,#eef2f2 52%);background-size:200% 100%;animation:shimmer 1.3s infinite}
-    .qr-corner-a,.qr-corner-b{position:absolute;width:24px;height:24px;border-color:var(--orange);border-style:solid;pointer-events:none}
-    .qr-corner-a{left:0;top:0;border-width:3px 0 0 3px;border-radius:7px 0 0}.qr-corner-b{right:0;bottom:0;border-width:0 3px 3px 0;border-radius:0 0 7px}
-    .home-qr-card h2{font-size:20px;letter-spacing:-.025em;margin:0 0 7px}.home-qr-card>p{margin:0 0 22px;color:#6d8089;font-size:12px;line-height:1.4}
-    .qr-card-foot{margin-inline:-26px;border-radius:0 0 27px 27px;padding:14px 18px;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:#eaf5f3;font-size:10px;font-weight:680}
-    .qr-card-foot .icon{color:#66d3bd;flex:none}
     .process-strip{background:var(--ink);color:#fff}.process-grid{min-height:230px;display:grid;grid-template-columns:.78fr 2fr;gap:70px;align-items:center}
     .process-intro>span{color:#73c9bb;font-size:9px;font-weight:900;letter-spacing:.19em}.process-intro h2{margin:10px 0 0;font-family:Georgia,serif;font-weight:400;font-size:31px;line-height:1.1}
     .process-list{margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);list-style:none}
@@ -101,7 +89,7 @@
     .success-wrap{padding:48px 0 88px}.success-card{width:min(100%,640px);margin:0 auto;padding:40px;text-align:center}.success-icon{width:67px;height:67px;margin:0 auto 18px;display:grid;place-items:center;border-radius:50%;color:#fff;background:var(--teal);box-shadow:0 0 0 10px rgba(8,127,120,.08)}.success-icon .icon{width:31px;height:31px}.success-kicker{color:var(--teal);font-size:9px;font-weight:900;letter-spacing:.17em}.success-card h1{margin:10px 0 7px;font-size:34px;letter-spacing:-.04em}.success-card>p{color:#657a85;margin:0;font-size:13px}
     .folio-display{margin:27px 0 17px;border:1px dashed #9cb9b6;background:#f3faf8;border-radius:17px;padding:18px;display:flex;flex-direction:column;align-items:center}.folio-display>span{color:#6e858b;font-size:8px;letter-spacing:.17em;font-weight:900}.folio-display>strong{margin:8px 0 10px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:clamp(22px,5vw,29px);letter-spacing:.04em}.copy-button{border:0;background:transparent;color:var(--teal);display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-size:10px;font-weight:800}
     .success-details{display:grid;grid-template-columns:1fr 1fr;border:1px solid #e5eaea;border-radius:13px;text-align:left;overflow:hidden}.success-details div{padding:13px 15px;display:flex;flex-direction:column;gap:4px;min-width:0}.success-details div+div{border-left:1px solid #e5eaea}.success-details span{color:#829298;font-size:9px}.success-details strong{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-size:12px}
-    .success-qr{margin-top:18px;background:var(--ink);color:#fff;border-radius:16px;padding:14px 18px;display:flex;align-items:center;text-align:left;gap:15px}.mini-qr{width:82px;height:82px;flex:none;background:#fff;border-radius:8px;padding:4px;display:grid;place-items:center}.mini-qr img,.mini-qr canvas{width:100%!important;height:100%!important}.success-qr-copy{display:flex;flex-direction:column;gap:5px}.success-qr-copy strong{font-size:12px}.success-qr-copy span{color:#aec2ca;font-size:10px;line-height:1.45}.success-actions{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}.success-note{text-align:center;color:#778b93;font-size:10px}
+    .success-actions{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:20px}.success-note{text-align:center;color:#778b93;font-size:10px}
 
     /* tracking */
     #view-tracking{background:radial-gradient(circle at 50% 0,rgba(8,127,120,.08),transparent 32%),#f8f6f0}.tracking-wrap{max-width:880px;padding:52px 0 88px}.tracking-heading{text-align:center}.tracking-heading .eyebrow{justify-content:center}.tracking-heading h1{margin:17px 0 8px;font-size:42px;letter-spacing:-.045em}.tracking-heading>p{margin:0;color:#657b86;font-size:14px}.tracking-search{margin:27px auto 0;width:min(100%,690px);min-height:60px;display:flex;align-items:center;gap:9px;padding:7px 7px 7px 18px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 13px 40px rgba(18,50,74,.08)}.tracking-search>.icon{color:#8ca0a6;flex:none}.tracking-search input{flex:1;min-width:0;border:0;outline:0;background:transparent;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--ink);font-size:15px;text-transform:uppercase}.tracking-search button{height:46px;padding:0 18px;border:0;border-radius:11px;display:flex;align-items:center;gap:8px;background:var(--teal);color:#fff;cursor:pointer;font-weight:800;font-size:12px}.tracking-search .barcode-scan-btn{width:46px;flex:none;padding:0;justify-content:center;border:1px solid #b9ded4;background:#eff9f6;color:var(--teal)}.tracking-search .barcode-scan-btn:hover{background:#dff4ee}
@@ -123,7 +111,7 @@
     .row-action{display:inline-flex;align-items:center;justify-content:center;gap:5px}.row-action .icon{width:13px;height:13px}.row-action.ready{background:#e9f3fa;border-color:#c6dfef;color:#246c98}.row-action.ready:hover{background:#dcecf6}.row-action.deliver{background:#edf8f0;border-color:#c9e7d0;color:#347a45}.row-action.deliver:hover{background:#e0f2e5}.row-action.completed{background:#f3f5f4;color:#829298;cursor:default}
 
     /* record modal */
-    .modal-backdrop{display:none;position:fixed;inset:0;z-index:50;background:rgba(10,27,38,.58);backdrop-filter:blur(4px);padding:24px;align-items:center;justify-content:center}.modal-backdrop.open{display:flex}.record-modal{width:min(100%,930px);max-height:min(90vh,850px);display:grid;grid-template-columns:1.05fr .95fr;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 30px 90px rgba(5,22,33,.3)}.modal-main,.modal-side{min-width:0;overflow:auto;max-height:min(90vh,850px)}.modal-main{padding:25px}.modal-side{padding:25px;background:#f6f8f7;border-left:1px solid var(--line)}.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.modal-kicker{color:var(--teal);font-size:8px;font-weight:900;letter-spacing:.14em}.modal-head h2{margin:5px 0 4px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:20px}.modal-head p{margin:0;color:#7f9096;font-size:9px}.close-btn{width:37px;height:37px;border:1px solid var(--line);border-radius:10px;background:#fff;display:grid;place-items:center;cursor:pointer;flex:none}.close-btn:hover{background:#f3f6f5}.modal-status-row{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding:13px;border:1px solid var(--line);border-radius:12px}.modal-status-row>span:first-child{color:#809198;font-size:9px}.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.detail-box{padding:12px;border:1px solid var(--line-soft);border-radius:10px;background:#fbfcfb;min-width:0}.detail-box.wide{grid-column:1/-1}.detail-box span{display:block;color:#89989e;font-size:8px}.detail-box strong{display:block;margin-top:4px;font-size:10px;overflow-wrap:anywhere}.contact-actions{display:flex;gap:8px;margin-top:12px}.contact-actions a{flex:1;height:36px;border:1px solid var(--line);border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;gap:6px;color:#526b75;font-size:9px;font-weight:750}.contact-actions a.whatsapp-action{background:#eaf8ef;border-color:#bfe5cc;color:#16743d}.contact-actions a.whatsapp-action:hover{background:#dcf3e5;border-color:#8fd3a7}.modal-section{margin-top:22px}.modal-section-title{display:flex;align-items:center;justify-content:space-between}.modal-section-title h3{margin:0;font-size:12px}.modal-section-title span{color:#8a999f;font-size:8px}.modal-timeline{margin-top:13px}
+    .modal-backdrop{display:none;position:fixed;inset:0;z-index:50;background:rgba(10,27,38,.58);backdrop-filter:blur(4px);padding:24px;align-items:center;justify-content:center}.modal-backdrop.open{display:flex}.record-modal{width:min(100%,930px);max-height:min(90vh,850px);display:grid;grid-template-columns:1.05fr .95fr;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 30px 90px rgba(5,22,33,.3)}.modal-main,.modal-side{min-width:0;overflow:auto;max-height:min(90vh,850px)}.modal-main{padding:25px}.modal-side{padding:25px;background:#f6f8f7;border-left:1px solid var(--line)}.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.modal-head-actions{display:flex;align-items:center;gap:8px}.modal-edit-btn{height:37px;padding:0 12px;border:1px solid #b9ded4;border-radius:10px;background:#eff9f6;color:var(--teal);display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:9px;font-weight:850;white-space:nowrap}.modal-edit-btn:hover,.modal-edit-btn.active{background:#dff4ee;border-color:#8fcfc0}.modal-edit-btn .icon{width:14px;height:14px}.modal-kicker{color:var(--teal);font-size:8px;font-weight:900;letter-spacing:.14em}.modal-head h2{margin:5px 0 4px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:20px}.modal-head p{margin:0;color:#7f9096;font-size:9px}.close-btn{width:37px;height:37px;border:1px solid var(--line);border-radius:10px;background:#fff;display:grid;place-items:center;cursor:pointer;flex:none}.close-btn:hover{background:#f3f6f5}.modal-status-row{display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding:13px;border:1px solid var(--line);border-radius:12px}.modal-status-row>span:first-child{color:#809198;font-size:9px}.details-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.detail-box{padding:12px;border:1px solid var(--line-soft);border-radius:10px;background:#fbfcfb;min-width:0}.detail-box.wide{grid-column:1/-1}.detail-box span{display:block;color:#89989e;font-size:8px}.detail-box strong{display:block;margin-top:4px;font-size:10px;overflow-wrap:anywhere}.record-edit-form{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px}.record-edit-field{display:flex;flex-direction:column;gap:6px;min-width:0}.record-edit-field.wide{grid-column:1/-1}.record-edit-field>span{color:#5b737d;font-size:8px;font-weight:800}.record-edit-field input,.record-edit-field textarea{width:100%;min-height:39px;padding:9px 10px;border:1px solid #cad8d8;border-radius:9px;background:#fff;color:var(--ink);outline:0;font-size:10px}.record-edit-field textarea{min-height:72px;resize:vertical;line-height:1.45}.record-edit-field input:focus,.record-edit-field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(8,127,120,.09)}.record-edit-actions{grid-column:1/-1;display:flex;justify-content:flex-end;gap:8px;margin-top:3px}.record-edit-actions .btn{min-height:39px;padding:0 14px;font-size:9px}.contact-actions{display:flex;gap:8px;margin-top:12px}.contact-actions a{flex:1;height:36px;border:1px solid var(--line);border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;gap:6px;color:#526b75;font-size:9px;font-weight:750}.contact-actions a.whatsapp-action{background:#eaf8ef;border-color:#bfe5cc;color:#16743d}.contact-actions a.whatsapp-action:hover{background:#dcf3e5;border-color:#8fd3a7}.modal-section{margin-top:22px}.modal-section-title{display:flex;align-items:center;justify-content:space-between}.modal-section-title h3{margin:0;font-size:12px}.modal-section-title span{color:#8a999f;font-size:8px}.modal-timeline{margin-top:13px}
     .action-panel{padding:16px;background:#fff;border:1px solid var(--line);border-radius:14px}.action-panel>span{color:var(--teal);font-size:8px;font-weight:900;letter-spacing:.12em}.action-panel h3{margin:5px 0 4px;font-size:15px}.action-panel>p{margin:0 0 13px;color:#768990;font-size:9px;line-height:1.5}.action-panel .btn{width:100%;min-height:43px;font-size:11px}.delivery-box{display:none;margin-top:11px;padding-top:12px;border-top:1px solid var(--line-soft)}.delivery-box.show{display:block}.compact-field{display:flex;flex-direction:column;gap:6px;margin-bottom:9px}.compact-field span{font-size:8px;color:#6d828a;font-weight:800}.compact-field input,.note-form textarea{width:100%;border:1px solid var(--line);border-radius:9px;background:#fff;outline:none;color:var(--ink)}.compact-field input{height:39px;padding:0 10px;font-size:10px}.compact-field input:focus,.note-form textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(8,127,120,.08)}.note-form{margin-top:14px;padding:16px;background:#fff;border:1px solid var(--line);border-radius:14px}.note-form h3{margin:0 0 4px;font-size:12px}.note-form p{margin:0 0 10px;color:#7f9096;font-size:8px;line-height:1.45}.note-form textarea{min-height:78px;padding:10px;resize:vertical;font-size:10px;line-height:1.45}.note-form button{margin-top:9px;width:100%}.local-data-note{margin-top:13px;padding:12px;border-radius:11px;background:#fff8ec;color:#8a652b;font-size:8px;line-height:1.55;border:1px solid #f1dfbc}
 
     .mini-modal-backdrop{display:none;position:fixed;inset:0;z-index:80;padding:20px;align-items:center;justify-content:center;background:rgba(10,27,38,.48);backdrop-filter:blur(3px)}.mini-modal-backdrop.open{display:flex}.mini-modal-card{width:min(100%,430px);padding:25px;border-radius:20px;background:#fff;box-shadow:0 28px 80px rgba(5,22,33,.28);text-align:center}.mini-modal-icon{width:54px;height:54px;margin:0 auto 12px;border-radius:16px;display:grid;place-items:center;background:#e9f7f2;color:#1d8c59}.mini-modal-icon .icon{width:27px;height:27px}.mini-modal-icon.delivery{background:#eaf2f8;color:#347aa5}.mini-modal-kicker{display:block;color:var(--teal);font-size:8px;font-weight:900;letter-spacing:.13em}.mini-modal-card h3{margin:7px 0 6px;font-size:19px;letter-spacing:-.025em}.mini-modal-card>p{margin:0;color:#71858d;font-size:10px;line-height:1.55}.mini-modal-summary{margin-top:15px;padding:11px 13px;border-radius:11px;background:#f5f8f7;color:#5c737d;font-size:10px}.mini-modal-summary strong{color:var(--ink)}.mini-modal-field{display:flex;flex-direction:column;gap:7px;margin-top:16px;text-align:left}.mini-modal-field span{color:#607680;font-size:9px;font-weight:800}.mini-modal-field input{height:43px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;color:var(--ink);font-size:11px}.mini-modal-field input:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(8,127,120,.09)}.mini-modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}.mini-modal-actions .btn{min-height:43px;padding-inline:12px}
@@ -142,11 +130,11 @@
     @media(max-width:1180px){.quick-ready{grid-template-columns:auto 1fr auto}.quick-ready-controls{grid-column:1/-1;grid-row:2}.pip-launch{grid-column:3;grid-row:1}}
     @media(max-width:760px){
       .page-width{width:min(100% - 28px,560px)}.public-header{height:70px}.brand-copy small{display:none}.public-header .header-link span{display:none}.public-header .header-link{width:42px;padding:0}.header-link.staff-link{display:none}
-      .hero{display:flex;flex-direction:column;gap:42px;min-height:0;padding:44px 0 68px}.hero-copy{width:100%}.hero h1{font-size:clamp(43px,13.2vw,64px);margin-top:18px}.hero-lead{font-size:15px;line-height:1.65}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.trust-row{gap:13px;justify-content:space-between;font-size:10px}.home-qr-card{width:calc(100% - 10px);max-width:390px;transform:none}.process-grid{display:block;padding:40px 0}.process-list{grid-template-columns:1fr;margin-top:25px}.process-list li{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:17px 0}.public-footer{align-items:flex-start;flex-direction:column;justify-content:center;gap:6px;padding:21px 0}
+      .hero{display:flex;flex-direction:column;gap:42px;min-height:0;padding:44px 0 68px}.hero-copy{width:100%}.hero h1{font-size:clamp(43px,13.2vw,64px);margin-top:18px}.hero-lead{font-size:15px;line-height:1.65}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.trust-row{gap:13px;justify-content:space-between;font-size:10px}.process-grid{display:block;padding:40px 0}.process-list{grid-template-columns:1fr;margin-top:25px}.process-list li{border-left:0;border-top:1px solid rgba(255,255,255,.12);padding:17px 0}.public-footer{align-items:flex-start;flex-direction:column;justify-content:center;gap:6px;padding:21px 0}
       .inner-titlebar .brand{position:static;transform:none}.inner-titlebar .brand-copy{display:none}.back-link{width:42px;padding:0}.back-link span{display:none}.form-layout{display:block;padding:34px 0 62px}.form-aside{padding:0}.form-aside h1{font-size:37px}.form-aside>p{max-width:none}.mini-steps{display:grid;grid-template-columns:repeat(3,1fr);margin:27px 0 24px}.mini-steps:before{left:15%;right:15%;top:15px;bottom:auto;width:auto;height:1px}.mini-steps li{flex-direction:column;text-align:center;gap:7px;margin:0}.mini-steps strong{font-size:9px}.mini-steps span{display:none}.registration-card{padding:22px 18px;border-radius:20px}.field-grid{grid-template-columns:1fr;gap:15px}.field-wide{grid-column:auto}.success-wrap{padding:34px 0 64px}.success-card{padding:29px 18px;border-radius:21px}.success-details,.success-actions{grid-template-columns:1fr}.success-details div+div{border-left:0;border-top:1px solid #e5eaea}
       .tracking-wrap{padding:36px 0 64px}.tracking-heading h1{font-size:34px}.tracking-search{min-height:57px}.tracking-search button{width:46px;padding:0;justify-content:center}.tracking-search button span{display:none}.status-banner{grid-template-columns:auto 1fr;padding:20px}.status-chip{grid-column:1/-1;justify-self:start}.tracking-steps{grid-template-columns:1fr;gap:5px;padding:20px}.tracking-step{min-height:43px}.tracking-step:after{left:13px;right:auto;top:30px;bottom:-10px;width:1px;height:auto}.tracking-step>.step-copy{padding-right:0}.tracking-columns{grid-template-columns:1fr}.record-summary{border-right:0;border-bottom:1px solid var(--line-soft)}.record-summary,.event-history{padding:21px}
       .staff-shell{display:block}.staff-sidebar{position:static;height:auto;padding:13px 14px;display:flex;flex-direction:row;align-items:center}.staff-sidebar .brand-copy{display:none}.staff-sidebar .brand-mark{width:39px;height:39px;border-radius:12px}.staff-nav{margin:0 0 0 auto;flex-direction:row}.staff-nav button{width:42px;height:39px;padding:0;justify-content:center}.staff-nav button span:not(.badge){display:none}.staff-nav .badge{position:absolute;transform:translate(13px,-13px)}.staff-help{display:none}.staff-topbar{height:auto;min-height:66px;padding:10px 14px}.staff-topbar h1{font-size:16px}.staff-user label>span{display:none}.staff-user input{width:115px}.staff-avatar{display:none}.staff-content{padding:20px 14px 36px}.welcome-row{align-items:flex-start}.date-chip{display:none}.metric-grid{grid-template-columns:repeat(2,1fr);gap:9px}.metric-card{padding:14px}.metric-card b{font-size:23px}.quick-ready{grid-template-columns:auto 1fr;padding:14px}.quick-ready-controls{grid-column:1/-1}.pip-launch{grid-column:1/-1;grid-row:auto;width:100%}.workspace-head{padding:14px}.workspace-tools{display:grid;grid-template-columns:1fr auto}.staff-search{grid-column:1/-1;width:100%}.small-btn span{display:none}.records-table-wrap{max-height:none;overflow:visible}.records-table{min-width:0}.records-table thead{display:none}.records-table,.records-table tbody,.records-table tr,.records-table td{display:block;width:100%}.records-table tbody{padding:8px}.records-table tbody tr{position:relative;margin-bottom:8px;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}.records-table td{border:0;padding:3px 0}.records-table td[data-label]:before{content:attr(data-label);display:inline-block;min-width:95px;color:#87969b;font-size:8px}.records-table td.person-cell:before{display:none}.records-table td:last-child{position:absolute;right:10px;bottom:10px}.person-cell strong{font-size:11px}.status-pill{margin-top:4px}.row-action{height:32px}
-      .modal-backdrop{padding:0;align-items:flex-end}.record-modal{width:100%;max-height:94vh;border-radius:22px 22px 0 0;display:block;overflow:auto}.modal-main,.modal-side{max-height:none;overflow:visible}.modal-main,.modal-side{padding:20px}.modal-side{border-left:0;border-top:1px solid var(--line)}.details-grid{grid-template-columns:1fr}.detail-box.wide{grid-column:auto}.mini-modal-backdrop{padding:0;align-items:flex-end}.mini-modal-card{border-radius:22px 22px 0 0;padding:23px 18px}.toast-region{left:12px;right:12px;bottom:12px}.toast{min-width:0;max-width:none;width:100%}
+      .modal-backdrop{padding:0;align-items:flex-end}.record-modal{width:100%;max-height:94vh;border-radius:22px 22px 0 0;display:block;overflow:auto}.modal-main,.modal-side{max-height:none;overflow:visible}.modal-main,.modal-side{padding:20px}.modal-side{border-left:0;border-top:1px solid var(--line)}.details-grid,.record-edit-form{grid-template-columns:1fr}.detail-box.wide,.record-edit-field.wide{grid-column:auto}.modal-edit-btn{width:37px;padding:0}.modal-edit-btn span{display:none}.mini-modal-backdrop{padding:0;align-items:flex-end}.mini-modal-card{border-radius:22px 22px 0 0;padding:23px 18px}.toast-region{left:12px;right:12px;bottom:12px}.toast{min-width:0;max-width:none;width:100%}
     }
     @media(max-width:760px){.pip-launch{grid-column:1/-1;grid-row:auto;width:100%}}
     @media print{.public-header,.success-actions,.success-note{display:none!important}.inner-view{background:#fff}.success-wrap{padding:0}.success-card{box-shadow:none;border:0}}
@@ -167,6 +155,7 @@
     <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></symbol>
     <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22a8 8 0 0 1 16 0"/></symbol>
     <symbol id="i-note" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
     <symbol id="i-package" viewBox="0 0 24 24"><path d="m7.5 4.3 9 5.2M21 8l-9 5-9-5M12 22V13"/><path d="M19 5 5 13v6l7 4 9-5V8l-9-5-4 2.3"/></symbol>
@@ -200,12 +189,6 @@
         </div>
         <div class="trust-row"><span><svg class="icon"><use href="#i-shield"/></svg> Datos protegidos</span><span><svg class="icon"><use href="#i-phone"/></svg> Adaptado a celular</span></div>
       </div>
-      <aside class="home-qr-card">
-        <div class="qr-card-top"><span class="qr-step">01</span><span class="live-pill"><i></i> LISTO PARA ESCANEAR</span></div>
-        <div class="qr-frame" id="start-qr"><div class="qr-loading"></div><span class="qr-corner-a"></span><span class="qr-corner-b"></span></div>
-        <h2>Escanea para comenzar</h2><p id="qr-help">Abre la cámara de tu celular y apunta al código.</p>
-        <div class="qr-card-foot"><svg class="icon"><use href="#i-check"/></svg> El folio se genera al completar el registro</div>
-      </aside>
     </section>
     <section class="process-strip"><div class="page-width process-grid"><div class="process-intro"><span>ASÍ FUNCIONA</span><h2>Tres pasos.<br>Cero confusión.</h2></div><ol class="process-list"><li><b>1</b><div><strong>Registra</strong><span>Captura el recibo y tus datos de contacto.</span></div></li><li><b>2</b><div><strong>Entrega</strong><span>Recepción confirma tus documentos.</span></div></li><li><b>3</b><div><strong>Consulta</strong><span>Usa tu folio para conocer el estado.</span></div></li></ol></div></section>
     <footer class="public-footer page-width"><span>Ventanilla · Seguimiento documental</span><span>Conserva tu folio hasta recibir tus documentos.</span></footer>
@@ -236,7 +219,7 @@
         <button class="btn btn-primary submit-btn" type="submit">Generar folio <svg class="icon"><use href="#i-arrow"/></svg></button><p class="privacy-note">Al continuar confirmas que los datos capturados son correctos.</p>
       </form>
     </section>
-    <section id="registration-success" class="success-wrap page-width" hidden><div class="card success-card"><div class="success-icon"><svg class="icon"><use href="#i-check"/></svg></div><span class="success-kicker">REGISTRO COMPLETADO</span><h1>Tu folio está listo</h1><p>Preséntalo en recepción junto con tus documentos.</p><div class="folio-display"><span>FOLIO DE SEGUIMIENTO</span><strong id="success-folio"></strong><button class="copy-button" id="copy-folio"><svg class="icon"><use href="#i-note"/></svg><span>Copiar folio</span></button></div><div class="success-details"><div><span>Contribuyente</span><strong id="success-name"></strong></div><div><span>Recibo</span><strong id="success-receipt"></strong></div></div><div class="success-qr"><div class="mini-qr" id="tracking-qr"></div><div class="success-qr-copy"><strong>Lleva el seguimiento contigo</strong><span>Guarda una captura de este código para consultar el estado.</span></div></div><div class="success-actions"><button class="btn btn-primary" id="view-new-tracking">Ver seguimiento <svg class="icon"><use href="#i-arrow"/></svg></button><button class="btn btn-secondary" onclick="window.print()">Imprimir comprobante</button></div></div><p class="success-note">Recepción también puede encontrarlo con el número de recibo.</p></section>
+    <section id="registration-success" class="success-wrap page-width" hidden><div class="card success-card"><div class="success-icon"><svg class="icon"><use href="#i-check"/></svg></div><span class="success-kicker">REGISTRO COMPLETADO</span><h1>Tu folio está listo</h1><p>Preséntalo en recepción junto con tus documentos.</p><div class="folio-display"><span>FOLIO DE SEGUIMIENTO</span><strong id="success-folio"></strong><button class="copy-button" id="copy-folio"><svg class="icon"><use href="#i-note"/></svg><span>Copiar folio</span></button></div><div class="success-details"><div><span>Contribuyente</span><strong id="success-name"></strong></div><div><span>Recibo</span><strong id="success-receipt"></strong></div></div><div class="success-actions"><button class="btn btn-primary" id="view-new-tracking">Ver seguimiento <svg class="icon"><use href="#i-arrow"/></svg></button><button class="btn btn-secondary" onclick="window.print()">Imprimir comprobante</button></div></div><p class="success-note">Recepción también puede encontrarlo con el número de recibo.</p></section>
   </main>
 
   <!-- SEGUIMIENTO -->
@@ -248,73 +231,243 @@
   <!-- RECEPCIÓN -->
   <main id="view-reception" class="view" hidden>
     <div class="staff-shell">
-      <aside class="staff-sidebar"><button class="brand" data-go="home"><span class="brand-mark"><svg class="icon"><use href="#i-file"/></svg></span><span class="brand-copy"><strong>Ventanilla</strong><small>Módulo de recepción</small></span></button><nav class="staff-nav"><button class="active"><svg class="icon"><use href="#i-home"/></svg><span>Panel general</span></button><button id="nav-pending"><svg class="icon"><use href="#i-inbox"/></svg><span>Por recibir</span><span class="badge" id="sidebar-pending">0</span></button><button data-go="tracking"><svg class="icon"><use href="#i-search"/></svg><span>Consulta pública</span></button></nav><div class="staff-help"><strong>Operación local</strong>Los datos se guardan en este navegador. Conserva una copia de respaldo periódicamente.</div></aside>
+      <aside class="staff-sidebar"><button class="brand" data-go="home"><span class="brand-mark"><svg class="icon"><use href="#i-file"/></svg></span><span class="brand-copy"><strong>Ventanilla</strong><small>Módulo de recepción</small></span></button><nav class="staff-nav"><button class="active"><svg class="icon"><use href="#i-home"/></svg><span>Panel general</span></button><button id="nav-pending"><svg class="icon"><use href="#i-inbox"/></svg><span>Por recibir</span><span class="badge" id="sidebar-pending">0</span></button><button data-go="tracking"><svg class="icon"><use href="#i-search"/></svg><span>Consulta pública</span></button></nav><div class="staff-help"><strong>Google Sheets</strong>La hoja compartida concentra los registros. Este navegador conserva una copia temporal para trabajar si se interrumpe Internet.</div></aside>
       <section class="staff-main"><header class="staff-topbar"><h1>Recepción documental</h1><div class="staff-user"><label><span>Responsable</span><input id="staff-name" value="Recepción" aria-label="Nombre del responsable"></label><div class="staff-avatar" id="staff-avatar">R</div></div></header><div class="staff-content"><div class="welcome-row"><div class="welcome-copy"><span>CONTROL DE DOCUMENTOS</span><h2>Buen día, <span id="staff-greeting-name">Recepción</span></h2><p>Confirma recepciones y registra entregas sin perder el seguimiento.</p></div><div class="date-chip"><svg class="icon"><use href="#i-calendar"/></svg><span id="today-label"></span></div></div>
         <div class="metric-grid"><button type="button" class="metric-card active" data-metric-filter="all" aria-pressed="true"><div class="metric-top"><div class="metric-icon"><svg class="icon"><use href="#i-receipt"/></svg></div><small>Total</small></div><b id="metric-total">0</b><span>Registros acumulados</span></button><button type="button" class="metric-card" data-metric-filter="registrado" aria-pressed="false"><div class="metric-top"><div class="metric-icon"><svg class="icon"><use href="#i-clock"/></svg></div><small>Pendientes</small></div><b id="metric-pending">0</b><span>Por confirmar recepción</span></button><button type="button" class="metric-card" data-metric-filter="process" aria-pressed="false"><div class="metric-top"><div class="metric-icon"><svg class="icon"><use href="#i-package"/></svg></div><small>En proceso</small></div><b id="metric-process">0</b><span>Recibidos o listos</span></button><button type="button" class="metric-card" data-metric-filter="entregado" aria-pressed="false"><div class="metric-top"><div class="metric-icon"><svg class="icon"><use href="#i-check"/></svg></div><small>Finalizados</small></div><b id="metric-delivered">0</b><span>Documentos entregados</span></button></div>
         <form id="quick-ready-form" class="quick-ready"><span class="quick-ready-icon"><svg class="icon"><use href="#i-receipt"/></svg></span><div class="quick-ready-copy"><strong>Marcar listo con el recibo</strong><span>Captura o escanea el número y presiona Enter.</span></div><div class="quick-ready-controls"><input id="quick-receipt" class="quick-ready-input" placeholder="Número de recibo" autocomplete="off" aria-label="Número de recibo para marcar listo"><button class="btn btn-primary" type="submit"><svg class="icon"><use href="#i-check"/></svg> Marcar listo</button></div><button id="open-quick-pip" class="pip-launch" type="button" title="Abrir captura en una ventana siempre visible"><svg class="icon"><use href="#i-window"/></svg><span>Ventana flotante</span></button></form>
-        <section class="workspace-card"><div class="workspace-head"><div class="workspace-title"><div class="workspace-title-row"><h3>Registros documentales</h3><span class="live-sync"><i></i>Actualización automática</span></div><p>Los folios nuevos aparecen aquí sin recargar la página.</p></div><div class="workspace-tools"><label class="staff-search"><svg class="icon"><use href="#i-search"/></svg><input id="staff-search" placeholder="Buscar por folio o recibo…" aria-label="Buscar por folio o número de recibo" autocomplete="off"></label><button id="staff-barcode-scan" class="small-btn" type="button" title="Leer código de barras con la cámara" aria-label="Leer código de barras"><svg class="icon"><use href="#i-barcode"/></svg><span>Escanear</span></button><select id="status-filter" class="filter-select" aria-label="Filtrar por estado"><option value="all">Todos</option><option value="registrado">Por recibir</option><option value="process">En proceso</option><option value="recibido">Recibidos</option><option value="listo">Listos</option><option value="entregado">Entregados</option></select><button id="email-config" class="small-btn email-config-btn" type="button" title="Configurar correo automático"><svg class="icon"><use href="#i-mail"/></svg><span>Correo</span><i class="email-dot" aria-hidden="true"></i></button><button id="export-csv" class="small-btn" title="Exportar registros"><svg class="icon"><use href="#i-download"/></svg><span>Exportar</span></button></div></div><div class="records-table-wrap"><table class="records-table"><thead><tr><th>Folio</th><th>Contribuyente</th><th>Recibo</th><th>Registro</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="records-body"></tbody></table><div id="empty-records" class="empty-records"><div><svg class="icon"><use href="#i-inbox"/></svg></div><strong id="empty-title">Aún no hay registros</strong><span id="empty-copy">El primer registro aparecerá aquí automáticamente.</span><button class="btn btn-primary" data-go="register">Crear primer registro</button></div></div></section>
+        <section class="workspace-card"><div class="workspace-head"><div class="workspace-title"><div class="workspace-title-row"><h3>Registros documentales</h3><span id="live-sync-label" class="live-sync"><i></i>Sincronización con Sheets</span></div><p>Los folios nuevos aparecen aquí sin recargar la página.</p></div><div class="workspace-tools"><label class="staff-search"><svg class="icon"><use href="#i-search"/></svg><input id="staff-search" placeholder="Buscar por folio o recibo…" aria-label="Buscar por folio o número de recibo" autocomplete="off"></label><button id="staff-barcode-scan" class="small-btn" type="button" title="Leer código de barras con la cámara" aria-label="Leer código de barras"><svg class="icon"><use href="#i-barcode"/></svg><span>Escanear</span></button><select id="status-filter" class="filter-select" aria-label="Filtrar por estado"><option value="all">Todos</option><option value="registrado">Por recibir</option><option value="process">En proceso</option><option value="recibido">Recibidos</option><option value="listo">Listos</option><option value="entregado">Entregados</option></select><button id="email-config" class="small-btn email-config-btn" type="button" title="Configurar Google Sheets y correo"><svg class="icon"><use href="#i-mail"/></svg><span>Sheets</span><i class="email-dot" aria-hidden="true"></i></button><button id="export-csv" class="small-btn" title="Exportar registros"><svg class="icon"><use href="#i-download"/></svg><span>Exportar</span></button></div></div><div class="records-table-wrap"><table class="records-table"><thead><tr><th>Folio</th><th>Contribuyente</th><th>Recibo</th><th>Registro</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="records-body"></tbody></table><div id="empty-records" class="empty-records"><div><svg class="icon"><use href="#i-inbox"/></svg></div><strong id="empty-title">Aún no hay registros</strong><span id="empty-copy">El primer registro aparecerá aquí automáticamente.</span><button class="btn btn-primary" data-go="register">Crear primer registro</button></div></div></section>
       </div></section>
     </div>
   </main>
 
   <!-- MODAL -->
-  <div id="record-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-folio"><div class="record-modal"><section class="modal-main"><div class="modal-head"><div><span class="modal-kicker">EXPEDIENTE DOCUMENTAL</span><h2 id="modal-folio"></h2><p id="modal-created"></p></div><button id="close-modal" class="close-btn" aria-label="Cerrar"><svg class="icon"><use href="#i-x"/></svg></button></div><div class="modal-status-row"><span>Estado actual</span><span id="modal-status"></span></div><div id="modal-details" class="details-grid"></div><div id="modal-contact-actions" class="contact-actions"></div><section class="modal-section"><div class="modal-section-title"><h3>Historial del registro</h3><span>Más reciente primero</span></div><ol id="modal-timeline" class="timeline modal-timeline"></ol></section></section><aside class="modal-side"><div id="action-panel" class="action-panel"></div><form id="note-form" class="note-form"><h3>Agregar nota para el contribuyente</h3><p>La nota se mostrará en el historial de seguimiento.</p><textarea id="note-text" required placeholder="Escribe una actualización breve…"></textarea><button class="btn btn-secondary" type="submit"><svg class="icon"><use href="#i-note"/></svg> Guardar nota</button></form><div class="local-data-note"><strong>Correo automático:</strong> al conectar Google Apps Script, los avisos se envían en segundo plano desde <strong>gamonjr90@gmail.com</strong>, sin abrir Gmail. Las pestañas abiertas de este HTML en el mismo navegador se sincronizan entre sí.</div></aside></div></div>
+  <div id="record-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-folio"><div class="record-modal"><section class="modal-main"><div class="modal-head"><div><span class="modal-kicker">EXPEDIENTE DOCUMENTAL</span><h2 id="modal-folio"></h2><p id="modal-created"></p></div><div class="modal-head-actions"><button id="edit-record" class="modal-edit-btn" type="button" title="Editar los datos capturados"><svg class="icon"><use href="#i-edit"/></svg><span>Editar datos</span></button><button id="close-modal" class="close-btn" aria-label="Cerrar"><svg class="icon"><use href="#i-x"/></svg></button></div></div><div class="modal-status-row"><span>Estado actual</span><span id="modal-status"></span></div><div id="modal-details" class="details-grid"></div><div id="modal-contact-actions" class="contact-actions"></div><section class="modal-section"><div class="modal-section-title"><h3>Historial del registro</h3><span>Más reciente primero</span></div><ol id="modal-timeline" class="timeline modal-timeline"></ol></section></section><aside class="modal-side"><div id="action-panel" class="action-panel"></div><form id="note-form" class="note-form"><h3>Agregar nota para el contribuyente</h3><p>La nota se mostrará en el historial de seguimiento.</p><textarea id="note-text" required placeholder="Escribe una actualización breve…"></textarea><button class="btn btn-secondary" type="submit"><svg class="icon"><use href="#i-note"/></svg> Guardar nota</button></form><div class="local-data-note"><strong>Google Sheets + correo:</strong> los registros se concentran en la hoja compartida y los avisos se envían en segundo plano desde <strong>gamonjr90@gmail.com</strong>, sin abrir Gmail. La copia local sirve como respaldo temporal.</div></aside></div></div>
   <div id="table-delivery-backdrop" class="mini-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="table-delivery-title"><form id="table-delivery-form" class="mini-modal-card"><div class="mini-modal-icon delivery"><svg class="icon"><use href="#i-package"/></svg></div><span class="mini-modal-kicker">ÚLTIMO PASO</span><h3 id="table-delivery-title">Registrar entrega</h3><p>Captura el nombre de la persona que recibe los documentos.</p><div id="table-delivery-summary" class="mini-modal-summary"></div><label class="mini-modal-field"><span>Nombre de quien recibe *</span><input id="table-delivered-to" autocomplete="off" placeholder="Nombre completo"></label><div class="mini-modal-actions"><button id="cancel-table-delivery" class="btn btn-secondary" type="button">Cancelar</button><button class="btn btn-primary" type="submit"><svg class="icon"><use href="#i-check"/></svg> Confirmar entrega</button></div></form></div>
-  <div id="email-settings-backdrop" class="mini-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="email-settings-title"><form id="email-settings-form" class="mini-modal-card email-setup-card"><div class="mini-modal-icon"><svg class="icon"><use href="#i-mail"/></svg></div><span class="mini-modal-kicker">CONFIGURACIÓN INICIAL</span><h3 id="email-settings-title">Correo automático en segundo plano</h3><p>Esta conexión se realiza una sola vez. Después, los cambios de estado no abrirán ninguna ventana de Gmail.</p><div class="email-account"><div><span>CUENTA QUE DEBE DESPLEGAR EL SERVICIO</span><strong>gamonjr90@gmail.com</strong></div><b id="email-connection-status">Por configurar</b></div><ol class="email-setup-steps"><li>Abre Apps Script con esa cuenta.</li><li>Copia y pega el código de conexión.</li><li>Selecciona <strong>Implementar → Nueva implementación → Aplicación web</strong>, ejecutar como tú y en “Quién tiene acceso” elegir <strong>Cualquier persona</strong>.</li><li>Pega abajo la URL terminada en <strong>/exec</strong>.</li></ol><div class="email-setup-links"><a class="btn btn-secondary" href="https://script.google.com/home/projects/create" target="_blank" rel="noopener">Abrir Apps Script</a><button id="copy-email-script" class="btn btn-secondary" type="button">Copiar código</button></div><label class="mini-modal-field"><span>URL de la aplicación web *</span><input id="email-endpoint" type="url" autocomplete="off" placeholder="https://script.google.com/macros/s/.../exec"></label><small class="email-setup-help">La URL se guarda solamente en este navegador. No se almacena la contraseña de Gmail.</small><span id="email-config-error" class="email-config-error">Ingresa una URL válida de Google Apps Script terminada en /exec.</span><div class="mini-modal-actions"><button id="cancel-email-settings" class="btn btn-secondary" type="button">Cancelar</button><button class="btn btn-primary" type="submit">Guardar conexión</button></div></form></div>
+  <div id="email-settings-backdrop" class="mini-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="email-settings-title"><form id="email-settings-form" class="mini-modal-card email-setup-card"><div class="mini-modal-icon"><svg class="icon"><use href="#i-mail"/></svg></div><span class="mini-modal-kicker">CONFIGURACIÓN INICIAL</span><h3 id="email-settings-title">Google Sheets y correo automático</h3><p>La misma aplicación de Apps Script guardará los registros en Drive y enviará los avisos sin abrir Gmail.</p><div class="email-account"><div><span>CUENTA QUE DEBE DESPLEGAR EL SERVICIO</span><strong>gamonjr90@gmail.com</strong></div><b id="email-connection-status">Por configurar</b></div><ol class="email-setup-steps"><li>Abre la hoja preparada con esa cuenta.</li><li>En la hoja selecciona <strong>Extensiones → Apps Script</strong>, borra el ejemplo y pega el código de conexión.</li><li>Selecciona <strong>Implementar → Nueva implementación → Aplicación web</strong>, ejecutar como tú y en “Quién tiene acceso” elegir <strong>Cualquier persona</strong>.</li><li>Pega abajo la URL terminada en <strong>/exec</strong>. La clave administrativa debe ser la misma en cada equipo de Recepción.</li></ol><div class="email-setup-links"><a class="btn btn-secondary" href="https://docs.google.com/spreadsheets/d/1f0Z8w8ZTA7Let9NJkdjYzXXa0-PvRKAXplLbSkZoIZ8/edit" target="_blank" rel="noopener">Abrir hoja de Google</a><button id="copy-email-script" class="btn btn-secondary" type="button">Copiar código completo</button></div><label class="mini-modal-field"><span>Clave administrativa *</span><input id="sheets-admin-key" type="text" autocomplete="off" spellcheck="false" placeholder="Se genera automáticamente"></label><label class="mini-modal-field"><span>URL de la aplicación web *</span><input id="email-endpoint" type="url" autocomplete="off" placeholder="https://script.google.com/macros/s/.../exec"></label><small class="email-setup-help">La URL y la clave se guardan solamente en este navegador. Los enlaces públicos comparten únicamente la URL del servicio; nunca incluyen la clave administrativa ni una contraseña de Google.</small><span id="email-config-error" class="email-config-error">Verifica la URL /exec y la clave administrativa.</span><div class="mini-modal-actions"><button id="cancel-email-settings" class="btn btn-secondary" type="button">Cancelar</button><button class="btn btn-primary" type="submit">Guardar y sincronizar</button></div></form></div>
   <div id="barcode-scanner-backdrop" class="mini-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="barcode-scanner-title"><div class="mini-modal-card barcode-card"><div class="barcode-head"><div><span class="mini-modal-kicker">BÚSQUEDA POR CÓDIGO</span><h3 id="barcode-scanner-title">Coloca el código frente a la cámara</h3><p>La búsqueda se realizará automáticamente al detectar el folio o recibo.</p></div><button id="close-barcode-scanner" class="close-btn" type="button" aria-label="Cerrar lector"><svg class="icon"><use href="#i-x"/></svg></button></div><div class="barcode-video-wrap"><video id="barcode-video" autoplay playsinline muted></video><span class="barcode-frame" aria-hidden="true"></span></div><div id="barcode-fallback" class="barcode-fallback">No fue posible usar la cámara. Conecta un lector USB o Bluetooth, coloca el cursor en la búsqueda y escanea el código.</div><div class="barcode-help"><span><strong>Consejo:</strong> evita reflejos y mantén el código dentro del recuadro.</span><button id="cancel-barcode-scanner" class="btn btn-secondary" type="button">Cancelar</button></div></div></div>
   <div id="toast-region" class="toast-region" aria-live="polite"></div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
   "use strict";
   const STORAGE_KEY = "ventanilla_documentos_v1";
   const STAFF_KEY = "ventanilla_responsable_v1";
   const SYNC_CHANNEL_KEY = "ventanilla_documentos_sync_v1";
-  const EMAIL_ENDPOINT_KEY = "ventanilla_email_webhook_v1";
+  const SERVICE_ENDPOINT_KEY = "ventanilla_email_webhook_v1";
+  const SHEETS_ADMIN_KEY = "ventanilla_sheets_admin_key_v1";
+  const SPREADSHEET_ID = "1f0Z8w8ZTA7Let9NJkdjYzXXa0-PvRKAXplLbSkZoIZ8";
+  const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit`;
   const GMAIL_SENDER = "gamonjr90@gmail.com";
-  const APPS_SCRIPT_CODE = String.raw`function doPost(e) {
+  const APPS_SCRIPT_CODE = String.raw`var SPREADSHEET_ID = "1f0Z8w8ZTA7Let9NJkdjYzXXa0-PvRKAXplLbSkZoIZ8";
+var SHEET_NAME = "Registros";
+var SENDER_EMAIL = "gamonjr90@gmail.com";
+var ADMIN_KEY = "__ADMIN_KEY__";
+var HEADERS = [
+  "ID", "Folio", "Recibo", "Fecha recibo", "Importe", "Contribuyente",
+  "Teléfono", "Correo", "Documentos", "Estado", "Fecha registro",
+  "Última actualización", "Fecha recepción", "Fecha listo", "Fecha entrega",
+  "Recibido por", "Entregado por", "Entregado a", "Eventos JSON", "Último correo"
+];
+var VALID_STATUSES = ["registrado", "recibido", "listo", "entregado"];
+var STATUS_LABELS = {
+  registrado: "Registro generado",
+  recibido: "Documentos recibidos",
+  listo: "Listo para entrega",
+  entregado: "Documentos entregados"
+};
+
+function doGet(e) {
   try {
-    var data = JSON.parse((e.postData && e.postData.contents) || "{}");
-    var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(data.to || ""));
-    var folioOk = /^RD-[A-Z0-9-]{6,30}$/.test(String(data.folio || ""));
-    var statuses = ["Registro generado", "Documentos recibidos", "Listo para entrega", "Documentos entregados"];
-    if (!emailOk || !folioOk || statuses.indexOf(String(data.status || "")) < 0) {
-      throw new Error("Datos de notificación inválidos");
+    var params = (e && e.parameter) || {};
+    var action = String(params.action || "ping");
+    if (action === "list") {
+      requireAdmin_(params.key);
+      return jsonp_({ok:true, records:listRecords_()}, params.callback);
     }
-    var name = String(data.name || "Contribuyente").slice(0, 180);
-    var receipt = String(data.receipt || "").slice(0, 80);
-    var folio = String(data.folio);
-    var status = String(data.status);
-    var link = String(data.trackingUrl || "").slice(0, 1000);
-    var body = [
-      "VENTANILLA DE RECEPCIÓN DOCUMENTAL", "", "Hola " + name + ".", "",
-      "Folio de seguimiento: " + folio, "Número de recibo: " + receipt,
-      "Estatus actual: " + status, "", "Consulta el estatus y los movimientos aquí:",
-      link, "", "Aviso: este correo se utiliza únicamente para notificaciones del seguimiento documental."
-    ].join("\n");
-    var html = '<div style="font-family:Arial,sans-serif;color:#12324a;max-width:620px">' +
-      '<div style="padding:22px;background:#12324a;color:#fff;border-radius:14px 14px 0 0">' +
-      '<div style="font-size:11px;letter-spacing:.12em;color:#8dd4c6">VENTANILLA DE RECEPCIÓN DOCUMENTAL</div>' +
-      '<h2 style="margin:8px 0 0;font-size:22px">' + escapeHtml_(status) + '</h2></div>' +
-      '<div style="padding:22px;border:1px solid #dfe8e6;border-top:0;border-radius:0 0 14px 14px">' +
-      '<p>Hola <strong>' + escapeHtml_(name) + '</strong>.</p>' +
-      '<p><strong>Folio:</strong> ' + escapeHtml_(folio) + '<br><strong>Recibo:</strong> ' + escapeHtml_(receipt) + '</p>' +
-      '<p><a href="' + escapeHtml_(link) + '" style="display:inline-block;padding:11px 16px;background:#087f78;color:#fff;text-decoration:none;border-radius:8px">Consultar seguimiento</a></p>' +
-      '<p style="margin-top:22px;color:#71858d;font-size:12px">Este correo se utiliza únicamente para notificaciones del seguimiento documental.</p></div></div>';
-    MailApp.sendEmail({
-      to: String(data.to),
-      subject: "Seguimiento " + folio + ": " + status,
-      body: body,
-      htmlBody: html,
-      name: "Ventanilla de Recepción Documental",
-      replyTo: "gamonjr90@gmail.com"
-    });
-    return ContentService.createTextOutput("OK");
+    if (action === "get") {
+      var query = clean_(params.q, 100);
+      if (!query) return jsonp_({ok:false, error:"Captura un folio o recibo."}, params.callback);
+      var matches = findPublicMatches_(query);
+      if (matches.length > 1) return jsonp_({ok:true, ambiguous:true}, params.callback);
+      return jsonp_({ok:true, record:matches.length ? publicRecord_(matches[0]) : null}, params.callback);
+    }
+    return jsonp_({ok:true, service:"Ventanilla documental", sheet:SHEET_NAME}, params.callback);
   } catch (error) {
-    return ContentService.createTextOutput("ERROR: " + error.message);
+    return jsonp_({ok:false, error:String(error.message || error)}, e && e.parameter && e.parameter.callback);
   }
 }
 
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  try {
+    var data = JSON.parse((e && e.postData && e.postData.contents) || "{}");
+    if (String(data.action || "") !== "saveRecord") throw new Error("Acción no válida.");
+    var incoming = validateRecord_(data.record || {});
+    var isAdmin = sameSecret_(data.adminKey, ADMIN_KEY);
+    lock.waitLock(20000);
+    var sheet = getSheet_();
+    var row = findRowByFolio_(sheet, incoming.folio);
+    var existing = row ? rowToRecord_(sheet.getRange(row, 1, 1, HEADERS.length).getValues()[0]) : null;
+    if (existing && !isAdmin) throw new Error("Se requiere la clave administrativa para modificar el registro.");
+    if (!existing && !isAdmin && incoming.status !== "registrado") throw new Error("El alta pública solo permite registros nuevos.");
+
+    var stored = incoming;
+    var lastEmail = row ? text_(sheet.getRange(row, 20).getValue()) : "";
+    if (existing && time_(existing.updatedAt) > time_(incoming.updatedAt)) stored = existing;
+    var values = recordToRow_(stored, lastEmail);
+    if (row) sheet.getRange(row, 1, 1, HEADERS.length).setValues([values]);
+    else {
+      row = Math.max(sheet.getLastRow() + 1, 2);
+      sheet.getRange(row, 1, 1, HEADERS.length).setValues([values]);
+    }
+
+    var emailEventId = clean_(data.emailEventId, 120);
+    var emailSent = false;
+    if (data.notifyEmail === true && emailEventId && emailEventId !== lastEmail) {
+      sendNotification_(stored, clean_(data.trackingUrl, 1200));
+      sheet.getRange(row, 20).setValue(emailEventId);
+      emailSent = true;
+    }
+    SpreadsheetApp.flush();
+    return json_({ok:true, folio:stored.folio, emailSent:emailSent});
+  } catch (error) {
+    return json_({ok:false, error:String(error.message || error)});
+  } finally {
+    try { lock.releaseLock(); } catch (ignored) {}
+  }
+}
+
+function getSheet_() {
+  var book = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet = book.getSheetByName(SHEET_NAME);
+  if (!sheet) sheet = book.insertSheet(SHEET_NAME);
+  if (sheet.getMaxColumns() < HEADERS.length) sheet.insertColumnsAfter(sheet.getMaxColumns(), HEADERS.length - sheet.getMaxColumns());
+  var current = sheet.getRange(1, 1, 1, HEADERS.length).getDisplayValues()[0];
+  if (current.join("|") !== HEADERS.join("|")) {
+    sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
+    sheet.setFrozenRows(1);
+  }
+  return sheet;
+}
+
+function listRecords_() {
+  var sheet = getSheet_();
+  if (sheet.getLastRow() < 2) return [];
+  var rows = sheet.getRange(2, 1, sheet.getLastRow() - 1, HEADERS.length).getValues();
+  return rows.filter(function(row) { return text_(row[1]); }).map(rowToRecord_).sort(function(a, b) {
+    return time_(b.updatedAt || b.createdAt) - time_(a.updatedAt || a.createdAt);
+  });
+}
+
+function findRowByFolio_(sheet, folio) {
+  var last = sheet.getLastRow();
+  if (last < 2) return 0;
+  var wanted = normalize_(folio);
+  var values = sheet.getRange(2, 2, last - 1, 1).getDisplayValues();
+  for (var i = 0; i < values.length; i++) if (normalize_(values[i][0]) === wanted) return i + 2;
+  return 0;
+}
+
+function findPublicMatches_(query) {
+  var wanted = normalize_(query);
+  var receipt = normalizeReceipt_(query);
+  var all = listRecords_();
+  var byFolio = all.filter(function(record) { return normalize_(record.folio) === wanted; });
+  if (byFolio.length) return byFolio;
+  return all.filter(function(record) { return normalizeReceipt_(record.receiptNumber) === receipt; });
+}
+
+function validateRecord_(source) {
+  var folio = normalize_(source.folio);
+  var status = clean_(source.status, 20).toLowerCase();
+  if (!/^RD-[A-Z0-9-]{6,30}$/.test(folio)) throw new Error("Folio no válido.");
+  if (VALID_STATUSES.indexOf(status) < 0) throw new Error("Estado no válido.");
+  if (!clean_(source.receiptNumber, 100)) throw new Error("El recibo es obligatorio.");
+  if (!clean_(source.taxpayerName, 220)) throw new Error("El contribuyente es obligatorio.");
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean_(source.email, 250))) throw new Error("Correo no válido.");
+  return {
+    id:clean_(source.id, 80), folio:folio, receiptNumber:clean_(source.receiptNumber, 100),
+    receiptDate:clean_(source.receiptDate, 40), receiptAmount:clean_(source.receiptAmount, 60),
+    taxpayerName:clean_(source.taxpayerName, 220), phone:clean_(source.phone, 80),
+    email:clean_(source.email, 250), documentDescription:clean_(source.documentDescription, 1200),
+    status:status, createdAt:clean_(source.createdAt, 60), updatedAt:clean_(source.updatedAt, 60),
+    receivedAt:clean_(source.receivedAt, 60), readyAt:clean_(source.readyAt, 60),
+    deliveredAt:clean_(source.deliveredAt, 60), receivedBy:clean_(source.receivedBy, 220),
+    deliveredBy:clean_(source.deliveredBy, 220), deliveredTo:clean_(source.deliveredTo, 220),
+    events:sanitizeEvents_(source.events)
+  };
+}
+
+function sanitizeEvents_(events) {
+  if (!Array.isArray(events)) return [];
+  return events.slice(-300).map(function(event) {
+    return {id:clean_(event.id, 80), type:clean_(event.type, 40), title:clean_(event.title, 240),
+      note:clean_(event.note, 1800), actor:clean_(event.actor, 220), createdAt:clean_(event.createdAt, 60)};
+  });
+}
+
+function recordToRow_(record, lastEmail) {
+  return [record.id, record.folio, record.receiptNumber, record.receiptDate, record.receiptAmount,
+    record.taxpayerName, record.phone, record.email, record.documentDescription, record.status,
+    record.createdAt, record.updatedAt, record.receivedAt, record.readyAt, record.deliveredAt,
+    record.receivedBy, record.deliveredBy, record.deliveredTo, JSON.stringify(record.events || []), lastEmail || ""];
+}
+
+function rowToRecord_(row) {
+  var events = [];
+  try { events = JSON.parse(text_(row[18]) || "[]"); } catch (ignored) {}
+  return {id:text_(row[0]), folio:text_(row[1]), receiptNumber:text_(row[2]), receiptDate:text_(row[3]),
+    receiptAmount:text_(row[4]), taxpayerName:text_(row[5]), phone:text_(row[6]), email:text_(row[7]),
+    documentDescription:text_(row[8]), status:text_(row[9]) || "registrado", createdAt:text_(row[10]),
+    updatedAt:text_(row[11]), receivedAt:text_(row[12]) || null, readyAt:text_(row[13]) || null,
+    deliveredAt:text_(row[14]) || null, receivedBy:text_(row[15]) || null, deliveredBy:text_(row[16]) || null,
+    deliveredTo:text_(row[17]) || null, events:sanitizeEvents_(events)};
+}
+
+function publicRecord_(record) {
+  return {folio:record.folio, receiptNumber:record.receiptNumber, receiptDate:record.receiptDate,
+    taxpayerName:record.taxpayerName, status:record.status, createdAt:record.createdAt,
+    updatedAt:record.updatedAt, receivedAt:record.receivedAt, readyAt:record.readyAt,
+    deliveredAt:record.deliveredAt, events:sanitizeEvents_(record.events)};
+}
+
+function sendNotification_(record, link) {
+  var status = STATUS_LABELS[record.status] || record.status;
+  var name = record.taxpayerName || "Contribuyente";
+  var body = ["VENTANILLA DE RECEPCIÓN DOCUMENTAL", "", "Hola " + name + ".", "",
+    "Folio de seguimiento: " + record.folio, "Número de recibo: " + record.receiptNumber,
+    "Estatus actual: " + status, "", "Consulta el estatus y los movimientos aquí:", link, "",
+    "Aviso: este correo se utiliza únicamente para notificaciones del seguimiento documental."].join("\n");
+  var html = '<div style="font-family:Arial,sans-serif;color:#12324a;max-width:620px">' +
+    '<div style="padding:22px;background:#12324a;color:#fff;border-radius:14px 14px 0 0">' +
+    '<div style="font-size:11px;letter-spacing:.12em;color:#8dd4c6">VENTANILLA DE RECEPCIÓN DOCUMENTAL</div>' +
+    '<h2 style="margin:8px 0 0;font-size:22px">' + escapeHtml_(status) + '</h2></div>' +
+    '<div style="padding:22px;border:1px solid #dfe8e6;border-top:0;border-radius:0 0 14px 14px">' +
+    '<p>Hola <strong>' + escapeHtml_(name) + '</strong>.</p>' +
+    '<p><strong>Folio:</strong> ' + escapeHtml_(record.folio) + '<br><strong>Recibo:</strong> ' + escapeHtml_(record.receiptNumber) + '</p>' +
+    '<p><a href="' + escapeHtml_(link) + '" style="display:inline-block;padding:11px 16px;background:#087f78;color:#fff;text-decoration:none;border-radius:8px">Consultar seguimiento</a></p>' +
+    '<p style="margin-top:22px;color:#71858d;font-size:12px">Este correo se utiliza únicamente para notificaciones del seguimiento documental.</p></div></div>';
+  MailApp.sendEmail({to:record.email, subject:"Seguimiento " + record.folio + ": " + status,
+    body:body, htmlBody:html, name:"Ventanilla de Recepción Documental", replyTo:SENDER_EMAIL});
+}
+
+function requireAdmin_(value) {
+  if (!sameSecret_(value, ADMIN_KEY)) throw new Error("Acceso administrativo no autorizado.");
+}
+function sameSecret_(value, expected) { return clean_(value, 300) && clean_(value, 300) === String(expected || ""); }
+function normalize_(value) { return clean_(value, 300).toUpperCase(); }
+function normalizeReceipt_(value) { return normalize_(value).replace(/\s+/g, ""); }
+function clean_(value, max) { return String(value == null ? "" : value).trim().slice(0, max || 500); }
+function time_(value) { var result = new Date(value || 0).getTime(); return isNaN(result) ? 0 : result; }
+function text_(value) {
+  if (Object.prototype.toString.call(value) === "[object Date]") return Utilities.formatDate(value, "GMT", "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+  return String(value == null ? "" : value);
+}
+function json_(data) { return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON); }
+function jsonp_(data, callback) {
+  var name = String(callback || "");
+  if (!/^[A-Za-z_$][0-9A-Za-z_$\.]{0,100}$/.test(name)) return json_(data);
+  return ContentService.createTextOutput(name + "(" + JSON.stringify(data) + ");").setMimeType(ContentService.MimeType.JAVASCRIPT);
+}
 function escapeHtml_(value) {
   return String(value || "").replace(/[&<>\"]/g, function(character) {
     return {"&":"&amp;", "<":"&lt;", ">":"&gt;", "\"":"&quot;"}[character];
@@ -336,6 +489,10 @@ function escapeHtml_(value) {
   let barcodeTimer = null;
   let barcodeDetector = null;
   let barcodeBusy = false;
+  let trackingSearchToken = 0;
+  let sheetsSyncInFlight = false;
+  let sheetsLastSync = 0;
+  let recordEditMode = false;
   try{if("BroadcastChannel" in window)recordsChannel=new BroadcastChannel(SYNC_CHANNEL_KEY)}catch{}
 
   const $ = (selector, root=document) => root.querySelector(selector);
@@ -354,7 +511,7 @@ function escapeHtml_(value) {
     records=nextRecords;recordsSnapshot=nextSnapshot;
     if(added.length){highlightedFolio=added[0].folio;setTimeout(()=>{if(highlightedFolio===added[0].folio){highlightedFolio=null;if(!$("#view-reception").hidden)renderReception()}},3400)}
     if(!$("#view-reception").hidden){renderReception();if(notify&&added.length)showToast(`Nuevo folio recibido: ${added[0].folio}`)}
-    if($("#record-modal-backdrop").classList.contains("open")&&selectedFolio&&findRecord(selectedFolio))openRecord(selectedFolio);
+    if($("#record-modal-backdrop").classList.contains("open")&&selectedFolio&&findRecord(selectedFolio))openRecord(selectedFolio,{preserveEdit:true});
     if(!$("#view-tracking").hidden){const current=$("#tracking-folio").value,record=findRecord(current);if(record){renderTracking(record);$("#tracking-result").classList.add("show")}}
     return true;
   }
@@ -370,7 +527,13 @@ function escapeHtml_(value) {
   function statusPill(status){return `<span class="status-pill ${status}"><i></i>${STATUS_SHORT[status]||status}</span>`}
   function rowActionButton(record){const actions={registrado:{label:"Recibir",next:"recibido",className:"primary",icon:"inbox"},recibido:{label:"Marcar listo",next:"listo",className:"ready",icon:"package"},listo:{label:"Entregar",next:"entregado",className:"deliver",icon:"check"}},action=actions[record.status];if(!action)return `<button type="button" class="row-action completed" data-no-row aria-disabled="true">${icon("check")} Finalizado</button>`;return `<button type="button" class="row-action ${action.className}" data-advance="${record.folio}" data-next-status="${action.next}">${icon(action.icon)} ${action.label}</button>`}
   function showToast(message,type="success"){const el=document.createElement("div");el.className=`toast ${type}`;el.innerHTML=`<span class="toast-dot"></span><span>${escapeHtml(message)}</span>`;$("#toast-region").append(el);setTimeout(()=>el.remove(),2700)}
-  function baseUrl(){return location.href.split("#")[0]}
+  function serviceEndpoint(){return localStorage.getItem(SERVICE_ENDPOINT_KEY)||""}
+  function sheetsAdminKey(){return localStorage.getItem(SHEETS_ADMIN_KEY)||""}
+  function validServiceEndpoint(value){try{const url=new URL(String(value||"").trim());return url.protocol==="https:"&&url.hostname==="script.google.com"&&/^\/macros\/s\/[^/]+\/exec$/.test(url.pathname)}catch{return false}}
+  function validAdminKey(value){return /^[A-Za-z0-9_-]{24,120}$/.test(String(value||"").trim())}
+  function getOrCreateAdminKey(){let key=sheetsAdminKey();if(validAdminKey(key))return key;try{const values=new Uint32Array(6);crypto.getRandomValues(values);key=[...values].map(value=>value.toString(16).padStart(8,"0")).join("")}catch{key=(uid()+uid()+uid()).slice(0,36)}localStorage.setItem(SHEETS_ADMIN_KEY,key);return key}
+  function adoptServiceFromUrl(){try{const candidate=new URL(location.href).searchParams.get("service")||"";if(validServiceEndpoint(candidate))localStorage.setItem(SERVICE_ENDPOINT_KEY,candidate)}catch{}}
+  function baseUrl(){const url=new URL(location.href);url.hash="";url.searchParams.delete("service");const endpoint=serviceEndpoint();if(validServiceEndpoint(endpoint))url.searchParams.set("service",endpoint);return url.href}
   function whatsappPhone(value){const digits=String(value||"").replace(/\D/g,"");if(digits.length===10)return "52"+digits;if(digits.length===13&&digits.startsWith("521"))return "52"+digits.slice(3);return digits}
   function trackingUrl(record){return `${baseUrl()}#seguimiento/${encodeURIComponent(record.folio)}`}
   function whatsappUrl(record){const phone=whatsappPhone(record.phone);const message=["📄 *VENTANILLA DE RECEPCIÓN DOCUMENTAL*","",`Hola *${record.taxpayerName}*.`,"",`🔎 *Folio de seguimiento:* \`${record.folio}\``,`🧾 *Recibo:* ${record.receiptNumber}`,`📌 *Estatus actual:* ${STATUS_LABELS[record.status]}`,"","Consulta el estatus y los movimientos aquí:",trackingUrl(record),"","ℹ️ *Aviso importante*","Este número se utiliza únicamente para notificaciones y control de turnos. No se reciben ni atienden mensajes de otro tipo."].join("\n");return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
@@ -382,24 +545,31 @@ function escapeHtml_(value) {
       if(!whatsappWindow)showToast("El navegador bloqueó la ventana de WhatsApp.","error")
     }catch{whatsappWindow=window.open(url,"ventanilla_whatsapp")}
   }
-  function emailEndpoint(){return localStorage.getItem(EMAIL_ENDPOINT_KEY)||""}
-  function validEmailEndpoint(value){try{const url=new URL(String(value||"").trim());return url.protocol==="https:"&&url.hostname==="script.google.com"&&/^\/macros\/s\/[^/]+\/exec$/.test(url.pathname)}catch{return false}}
-  function emailPayload(record){return{to:String(record.email||"").trim(),name:record.taxpayerName,folio:record.folio,receipt:record.receiptNumber,status:STATUS_LABELS[record.status],trackingUrl:trackingUrl(record),sender:GMAIL_SENDER}}
-  async function sendAutomaticEmail(record,{notify=true}={}){
-    if(!record||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(record.email||"").trim())){if(notify)showToast("El registro no tiene un correo válido.","error");return false}
-    const endpoint=emailEndpoint();
-    if(!validEmailEndpoint(endpoint)){if(notify)showToast("Configura una vez el correo automático.","error");updateEmailConnectionUi();return false}
-    try{
-      await fetch(endpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(emailPayload(record)),keepalive:true});
-      if(notify)showToast(`Correo enviado automáticamente a ${record.email}.`);
-      return true;
-    }catch{if(notify)showToast("No fue posible enviar el correo automático.","error");return false}
+  function jsonpRequest(params,timeout=10000){return new Promise((resolve,reject)=>{const endpoint=serviceEndpoint();if(!validServiceEndpoint(endpoint)){reject(new Error("Servicio no configurado"));return}const callback=`__ventanilla_jsonp_${uid()}`,url=new URL(endpoint),script=document.createElement("script");Object.entries(params||{}).forEach(([key,value])=>{if(value!==undefined&&value!==null)url.searchParams.set(key,String(value))});url.searchParams.set("callback",callback);let timer;const cleanup=()=>{clearTimeout(timer);script.remove();try{delete window[callback]}catch{window[callback]=undefined}};window[callback]=data=>{cleanup();resolve(data)};script.onerror=()=>{cleanup();reject(new Error("No fue posible consultar Google Sheets"))};timer=setTimeout(()=>{cleanup();reject(new Error("La consulta a Google Sheets tardó demasiado"))},timeout);script.src=url.href;document.head.append(script)})}
+  function sheetRecord(record){return JSON.parse(JSON.stringify(record||{}))}
+  async function saveRecordToSheets(record,{notifyEmail=false,emailEventId="",requireAdmin=true}={}){
+    const endpoint=serviceEndpoint(),adminKey=sheetsAdminKey();
+    if(!record||!validServiceEndpoint(endpoint)||requireAdmin&&!validAdminKey(adminKey))return false;
+    try{await fetch(endpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action:"saveRecord",record:sheetRecord(record),adminKey:validAdminKey(adminKey)?adminKey:"",notifyEmail:Boolean(notifyEmail),emailEventId:String(emailEventId||""),trackingUrl:trackingUrl(record)}),keepalive:true});return true}catch{return false}
   }
-  function updateEmailConnectionUi(){const connected=validEmailEndpoint(emailEndpoint()),button=$("#email-config"),status=$("#email-connection-status");button?.classList.toggle("connected",connected);if(button)button.title=connected?`Correo automático activo · ${GMAIL_SENDER}`:"Configurar correo automático";if(status){status.textContent=connected?"Conectado":"Por configurar";status.classList.toggle("connected",connected)}return connected}
-  function openEmailSettings(){$("#email-endpoint").value=emailEndpoint();$("#email-config-error").classList.remove("show");updateEmailConnectionUi();$("#email-settings-backdrop").classList.add("open");updateModalLock();setTimeout(()=>$("#email-endpoint").focus(),30)}
+  function mergeSheetRecords(remoteRecords){const localByFolio=new Map(records.map(record=>[String(record.folio||"").toUpperCase(),record])),remoteFolios=new Set(),pending=[];const merged=remoteRecords.map(remote=>{remote.events=Array.isArray(remote.events)?remote.events:[];const key=String(remote.folio||"").toUpperCase(),local=localByFolio.get(key);remoteFolios.add(key);if(local&&new Date(local.updatedAt||0)>new Date(remote.updatedAt||0)){pending.push(local);return local}return remote});records.forEach(local=>{const key=String(local.folio||"").toUpperCase();if(!remoteFolios.has(key)){merged.push(local);pending.push(local)}});merged.sort((a,b)=>new Date(b.createdAt||0)-new Date(a.createdAt||0));return{merged,pending}}
+  async function syncRecordsFromSheets(notify=false,{force=false}={}){
+    const endpoint=serviceEndpoint(),adminKey=sheetsAdminKey();if(!validServiceEndpoint(endpoint)||!validAdminKey(adminKey)||sheetsSyncInFlight)return false;
+    if(!force&&Date.now()-sheetsLastSync<2500)return false;sheetsSyncInFlight=true;updateSheetSyncUi("syncing");
+    try{const response=await jsonpRequest({action:"list",key:adminKey});if(!response?.ok||!Array.isArray(response.records))throw new Error(response?.error||"Respuesta no válida");const previousFolios=new Set(records.map(record=>record.folio)),{merged,pending}=mergeSheetRecords(response.records),snapshot=JSON.stringify(merged),added=merged.filter(record=>!previousFolios.has(record.folio));sheetsLastSync=Date.now();if(snapshot!==recordsSnapshot){records=merged;saveRecords();if(added.length){highlightedFolio=added[0].folio;setTimeout(()=>{if(highlightedFolio===added[0].folio){highlightedFolio=null;if(!$("#view-reception").hidden)renderReception()}},3400)}if(!$("#view-reception").hidden){renderReception();if(notify&&added.length)showToast(`Nuevo folio recibido: ${added[0].folio}`)}if($("#record-modal-backdrop").classList.contains("open")&&selectedFolio&&findRecord(selectedFolio))openRecord(selectedFolio,{preserveEdit:true})}pending.forEach(record=>saveRecordToSheets(record,{requireAdmin:true}));updateSheetSyncUi("connected");return true}catch{updateSheetSyncUi("error");return false}finally{sheetsSyncInFlight=false}
+  }
+  async function sendAutomaticEmail(record,{notify=true,eventId=""}={}){
+    if(!record||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(record.email||"").trim())){if(notify)showToast("El registro no tiene un correo válido.","error");return false}
+    if(!validServiceEndpoint(serviceEndpoint())||!validAdminKey(sheetsAdminKey())){if(notify)showToast("Configura Google Sheets y el correo automático.","error");updateEmailConnectionUi();return false}
+    const ok=await saveRecordToSheets(record,{notifyEmail:true,emailEventId:eventId||`manual-${uid()}`,requireAdmin:true});
+    if(notify)showToast(ok?`Correo programado automáticamente para ${record.email}.`:"No fue posible programar el correo automático.",ok?"success":"error");return ok
+  }
+  function updateSheetSyncUi(state=""){const label=$("#live-sync-label"),endpointOk=validServiceEndpoint(serviceEndpoint()),adminOk=validAdminKey(sheetsAdminKey());if(!label)return;if(state==="syncing"){label.innerHTML="<i></i>Sincronizando con Sheets";return}if(state==="error"){label.innerHTML="<i></i>Sheets sin conexión · copia local";return}label.innerHTML=endpointOk&&adminOk?"<i></i>Sheets conectado":endpointOk?"<i></i>Consulta pública conectada":"<i></i>Copia local"}
+  function updateEmailConnectionUi(){const connected=validServiceEndpoint(serviceEndpoint())&&validAdminKey(sheetsAdminKey()),button=$("#email-config"),status=$("#email-connection-status");button?.classList.toggle("connected",connected);if(button)button.title=connected?`Google Sheets y correo activos · ${GMAIL_SENDER}`:"Configurar Google Sheets y correo";if(status){status.textContent=connected?"Conectado":"Por configurar";status.classList.toggle("connected",connected)}updateSheetSyncUi();return connected}
+  function openEmailSettings(){$("#email-endpoint").value=serviceEndpoint();$("#sheets-admin-key").value=getOrCreateAdminKey();$("#email-config-error").classList.remove("show");updateEmailConnectionUi();$("#email-settings-backdrop").classList.add("open");updateModalLock();setTimeout(()=>$("#email-endpoint").focus(),30)}
   function closeEmailSettings(){$("#email-settings-backdrop").classList.remove("open");updateModalLock()}
-  function saveEmailSettings(event){event.preventDefault();const input=$("#email-endpoint"),value=input.value.trim();if(!validEmailEndpoint(value)){$("#email-config-error").classList.add("show");input.focus();return}localStorage.setItem(EMAIL_ENDPOINT_KEY,value);updateEmailConnectionUi();closeEmailSettings();showToast("Correo automático conectado.")}
-  async function copyEmailScript(){try{await navigator.clipboard.writeText(APPS_SCRIPT_CODE);showToast("Código de conexión copiado.")}catch{showToast("No fue posible copiar el código.","error")}}
+  function saveEmailSettings(event){event.preventDefault();const input=$("#email-endpoint"),keyInput=$("#sheets-admin-key"),value=input.value.trim(),key=keyInput.value.trim();if(!validServiceEndpoint(value)||!validAdminKey(key)){$("#email-config-error").classList.add("show");(!validAdminKey(key)?keyInput:input).focus();return}localStorage.setItem(SERVICE_ENDPOINT_KEY,value);localStorage.setItem(SHEETS_ADMIN_KEY,key);updateEmailConnectionUi();closeEmailSettings();showToast("Google Sheets y correo automático conectados.");syncRecordsFromSheets(true,{force:true})}
+  async function copyEmailScript(){const input=$("#sheets-admin-key"),key=validAdminKey(input?.value)?input.value.trim():getOrCreateAdminKey();if(input)input.value=key;localStorage.setItem(SHEETS_ADMIN_KEY,key);const code=APPS_SCRIPT_CODE.replaceAll("__ADMIN_KEY__",key);try{await navigator.clipboard.writeText(code);showToast("Código completo de Sheets y correo copiado.")}catch{showToast("No fue posible copiar el código.","error")}}
 
   function barcodeInput(target=barcodeTarget){return target==="tracking"?$("#tracking-folio"):$("#staff-search")}
   function focusBarcodeInput(target=barcodeTarget){const input=barcodeInput(target);if(input){input.focus();input.select()}}
@@ -436,12 +606,6 @@ function escapeHtml_(value) {
     const target=barcodeTarget;barcodeTarget=null;if(focusInput)focusBarcodeInput(target);
   }
 
-  function makeQr(target,text){
-    target.innerHTML="";
-    if(window.QRCode){new QRCode(target,{text,width:300,height:300,colorDark:"#12324a",colorLight:"#ffffff",correctLevel:QRCode.CorrectLevel.H})}
-    else{target.innerHTML=`<div style="font-size:10px;line-height:1.4;color:#7b8b91;padding:12px">QR no disponible.<br>${escapeHtml(text)}</div>`}
-  }
-
   function route(view,folioValue){
     const hash=view==="home"?"":view==="tracking"&&folioValue?`#seguimiento/${encodeURIComponent(folioValue)}`:`#${view==="register"?"registro":view==="tracking"?"seguimiento":"recepcion"}`;
     if(location.hash!==hash)history.pushState(null,"",baseUrl()+hash);
@@ -454,14 +618,8 @@ function escapeHtml_(value) {
     $$(".view").forEach(v=>v.hidden=true);$("#view-"+view).hidden=false;
     if(view==="register"&&!latestCreatedFolio){$("#registration-form-view").hidden=false;$("#registration-success").hidden=true;setTimeout(()=>$("#receipt-number").focus(),50)}
     if(view==="tracking"){if(trackingFolio){$("#tracking-folio").value=trackingFolio;searchTracking(trackingFolio)}else resetTracking()}
-    if(view==="reception"){syncRecordsFromStorage(false);renderReception();setTimeout(()=>$("#quick-receipt").focus(),50)}
+    if(view==="reception"){syncRecordsFromStorage(false);renderReception();syncRecordsFromSheets(true,{force:true});setTimeout(()=>$("#quick-receipt").focus(),50)}
     window.scrollTo({top:0,behavior:"instant"});
-  }
-
-  function initStartQr(){
-    makeQr($("#start-qr"),baseUrl()+"#registro");
-    $("#start-qr").insertAdjacentHTML("beforeend",'<span class="qr-corner-a"></span><span class="qr-corner-b"></span>');
-    if(location.protocol==="file:")$("#qr-help").textContent="El QR funcionará en otros teléfonos cuando publiques este HTML.";
   }
 
   function handleRegistration(event){
@@ -473,23 +631,24 @@ function escapeHtml_(value) {
     if(!/^\S+@\S+\.\S+$/.test(email)){const box=$("#registration-error");box.textContent="Ingresa un correo electrónico válido.";box.classList.add("show");return}
     const created=nowIso();
     const record={id:uid(),folio:folio(),receiptNumber:String(data.receiptNumber).trim(),receiptDate:data.receiptDate,receiptAmount:data.receiptAmount||"",documentDescription:String(data.documentDescription||"").trim(),taxpayerName:String(data.taxpayerName).trim(),phone:String(data.phone).trim(),email,status:"registrado",createdAt:created,updatedAt:created,receivedAt:null,readyAt:null,deliveredAt:null,receivedBy:null,deliveredBy:null,deliveredTo:null,events:[{id:uid(),type:"registro",title:"Registro creado",note:"La información fue capturada. Presenta este folio al entregar tus documentos.",actor:"Sistema",createdAt:created}]};
-    records.unshift(record);saveRecords();latestCreatedFolio=record.folio;highlightedFolio=record.folio;renderReception();
+    records.unshift(record);saveRecords();saveRecordToSheets(record,{notifyEmail:true,emailEventId:record.events[0].id,requireAdmin:false});latestCreatedFolio=record.folio;highlightedFolio=record.folio;renderReception();
     $("#registration-error").classList.remove("show");$("#success-folio").textContent=record.folio;$("#success-name").textContent=record.taxpayerName;$("#success-receipt").textContent=record.receiptNumber;
-    $("#registration-form-view").hidden=true;$("#registration-success").hidden=false;makeQr($("#tracking-qr"),baseUrl()+`#seguimiento/${encodeURIComponent(record.folio)}`);form.reset();setDefaultDate();window.scrollTo({top:0,behavior:"smooth"});
+    $("#registration-form-view").hidden=true;$("#registration-success").hidden=false;form.reset();setDefaultDate();window.scrollTo({top:0,behavior:"smooth"});
   }
 
   function resetTracking(){
     $("#tracking-error").classList.remove("show");$("#tracking-result").classList.remove("show");$("#tracking-empty").hidden=false;$("#tracking-error-title").textContent="No encontramos el registro";$("#tracking-error-copy").textContent="Verifica el folio o número de recibo e intenta nuevamente.";
   }
-  function searchTracking(value){
-    const normalized=String(value||"").trim().toUpperCase();$("#tracking-folio").value=normalized;
+  function showTrackingError(title,copy){$("#tracking-error-title").textContent=title;$("#tracking-error-copy").textContent=copy;$("#tracking-error").classList.add("show");$("#tracking-result").classList.remove("show");$("#tracking-empty").hidden=true}
+  function showTrackingRecord(record){$("#tracking-folio").value=record.folio;$("#tracking-error").classList.remove("show");$("#tracking-empty").hidden=true;renderTracking(record);$("#tracking-result").classList.add("show");history.replaceState(null,"",baseUrl()+`#seguimiento/${encodeURIComponent(record.folio)}`)}
+  async function searchTracking(value){
+    const normalized=String(value||"").trim().toUpperCase(),token=++trackingSearchToken;$("#tracking-folio").value=normalized;
+    if(!normalized){resetTracking();return}
     const byFolio=findRecord(normalized),byReceipt=byFolio?[]:records.filter(r=>normalizeReceipt(r.receiptNumber)===normalizeReceipt(normalized));
-    if(byReceipt.length>1){$("#tracking-error-title").textContent="Hay varios registros con ese recibo";$("#tracking-error-copy").textContent="Para identificar el seguimiento correcto, realiza la búsqueda con el folio RD- correspondiente.";$("#tracking-error").classList.add("show");$("#tracking-result").classList.remove("show");$("#tracking-empty").hidden=true;return}
-    const record=byFolio||byReceipt[0];
-    if(!record){$("#tracking-error-title").textContent="No encontramos el registro";$("#tracking-error-copy").textContent="Verifica el folio o número de recibo e intenta nuevamente.";$("#tracking-error").classList.add("show");$("#tracking-result").classList.remove("show");$("#tracking-empty").hidden=true;return}
-    $("#tracking-folio").value=record.folio;
-    $("#tracking-error").classList.remove("show");$("#tracking-empty").hidden=true;renderTracking(record);$("#tracking-result").classList.add("show");
-    history.replaceState(null,"",baseUrl()+`#seguimiento/${encodeURIComponent(record.folio)}`);
+    if(byReceipt.length>1){showTrackingError("Hay varios registros con ese recibo","Para identificar el seguimiento correcto, realiza la búsqueda con el folio RD- correspondiente.");return}
+    const localRecord=byFolio||byReceipt[0];if(localRecord)showTrackingRecord(localRecord);
+    if(validServiceEndpoint(serviceEndpoint())){try{const response=await jsonpRequest({action:"get",q:normalized});if(token!==trackingSearchToken)return;if(response?.ambiguous){showTrackingError("Hay varios registros con ese recibo","Para identificar el seguimiento correcto, realiza la búsqueda con el folio RD- correspondiente.");return}if(response?.ok&&response.record){showTrackingRecord(response.record);return}}catch{if(localRecord)return}}
+    if(!localRecord)showTrackingError("No encontramos el registro","Verifica el folio o número de recibo e intenta nuevamente.")
   }
   function renderTracking(record){
     const index=STATUS_ORDER.indexOf(record.status);const latest=[...(record.events||[])].sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt))[0];
@@ -505,15 +664,18 @@ function escapeHtml_(value) {
     const filtered=records.filter(r=>matchesStatus(r)&&(!query||[r.folio,r.receiptNumber,r.taxpayerName,r.phone,r.email].some(v=>String(v||"").toLowerCase().includes(query))));
     $("#metric-total").textContent=records.length;$("#metric-pending").textContent=records.filter(r=>r.status==="registrado").length;$("#metric-process").textContent=records.filter(r=>r.status==="recibido"||r.status==="listo").length;$("#metric-delivered").textContent=records.filter(r=>r.status==="entregado").length;$("#sidebar-pending").textContent=records.filter(r=>r.status==="registrado").length;
     $$('[data-metric-filter]').forEach(card=>{const active=card.dataset.metricFilter===filter;card.classList.toggle("active",active);card.setAttribute("aria-pressed",String(active))});
-    const body=$("#records-body");body.innerHTML=filtered.map(r=>`<tr data-folio="${r.folio}" class="${selectedFolio===r.folio?"selected":""} ${highlightedFolio===r.folio?"new-record":""}"><td data-label="Folio" class="folio-cell">${r.folio}</td><td class="person-cell"><strong>${escapeHtml(r.taxpayerName)}</strong><span>${escapeHtml(r.phone)}</span></td><td data-label="Recibo">${escapeHtml(r.receiptNumber)}</td><td data-label="Registro">${formatDate(r.createdAt,false)}</td><td data-label="Estado">${statusPill(r.status)}</td><td>${rowActionButton(r)}</td></tr>`).join("");
+    const body=$("#records-body");body.innerHTML=filtered.map(r=>`<tr data-folio="${r.folio}" tabindex="0" title="Clic o doble clic para ver todos los datos" aria-label="Abrir detalles del folio ${r.folio}" class="${selectedFolio===r.folio?"selected":""} ${highlightedFolio===r.folio?"new-record":""}"><td data-label="Folio" class="folio-cell">${r.folio}</td><td class="person-cell"><strong>${escapeHtml(r.taxpayerName)}</strong><span>${escapeHtml(r.phone)}</span></td><td data-label="Recibo">${escapeHtml(r.receiptNumber)}</td><td data-label="Registro">${formatDate(r.createdAt,false)}</td><td data-label="Estado">${statusPill(r.status)}</td><td>${rowActionButton(r)}</td></tr>`).join("");
     const empty=$("#empty-records");empty.classList.toggle("show",filtered.length===0);$(".records-table").style.display=filtered.length?"table":"none";$("#empty-title").textContent=records.length?"No hay coincidencias":"Aún no hay registros";$("#empty-copy").textContent=records.length?"Cambia la búsqueda o el filtro para ver más registros.":"El primer registro aparecerá aquí automáticamente.";
   }
 
-  function openRecord(folioValue){selectedFolio=folioValue;const r=findRecord(folioValue);if(!r)return;renderReception();$("#modal-folio").textContent=r.folio;$("#modal-created").textContent=`Registrado ${formatDate(r.createdAt)}`;$("#modal-status").innerHTML=statusPill(r.status);
-    $("#modal-details").innerHTML=`<div class="detail-box wide"><span>Nombre o razón social</span><strong>${escapeHtml(r.taxpayerName)}</strong></div><div class="detail-box"><span>Número de recibo</span><strong>${escapeHtml(r.receiptNumber)}</strong></div><div class="detail-box"><span>Fecha / importe</span><strong>${formatReceiptDate(r.receiptDate)} · ${money(r.receiptAmount)}</strong></div><div class="detail-box wide"><span>Documentos</span><strong>${escapeHtml(r.documentDescription||"Sin descripción")}</strong></div><div class="detail-box"><span>Teléfono</span><strong>${escapeHtml(r.phone)}</strong></div><div class="detail-box"><span>Correo</span><strong>${escapeHtml(r.email)}</strong></div>`;
-    $("#modal-contact-actions").innerHTML=`<a class="whatsapp-action" href="${escapeHtml(whatsappUrl(r))}" data-whatsapp="${r.folio}">${icon("message")} WhatsApp</a><a href="tel:${escapeHtml(r.phone.replace(/[^\d+]/g,""))}">${icon("phone")} Llamar</a><a href="#" data-email="${r.folio}" title="Enviar correo automático">${icon("mail")} Correo</a>`;
-    renderModalTimeline(r);renderActionPanel(r);$("#note-text").value="";$("#record-modal-backdrop").classList.add("open");document.body.classList.add("modal-open");setTimeout(()=>$("#close-modal").focus(),30);
+  function renderModalDetails(r){const details=$("#modal-details"),contacts=$("#modal-contact-actions"),button=$("#edit-record");button.classList.toggle("active",recordEditMode);button.innerHTML=recordEditMode?`${icon("x")}<span>Cancelar edición</span>`:`${icon("edit")}<span>Editar datos</span>`;button.title=recordEditMode?"Cancelar edición":"Editar los datos capturados";
+    if(recordEditMode){contacts.hidden=true;details.innerHTML=`<form id="record-edit-form" class="record-edit-form" novalidate><label class="record-edit-field wide"><span>Nombre o razón social *</span><input name="taxpayerName" required autocomplete="name" value="${escapeHtml(r.taxpayerName)}"></label><label class="record-edit-field wide"><span>Número de recibo *</span><input name="receiptNumber" required autocomplete="off" value="${escapeHtml(r.receiptNumber)}"></label><label class="record-edit-field"><span>Fecha del recibo *</span><input name="receiptDate" type="date" required value="${escapeHtml(r.receiptDate)}"></label><label class="record-edit-field"><span>Importe del recibo</span><input name="receiptAmount" type="number" min="0" step="0.01" inputmode="decimal" value="${escapeHtml(r.receiptAmount)}"></label><label class="record-edit-field wide"><span>Documentos entregados</span><textarea name="documentDescription" rows="3">${escapeHtml(r.documentDescription||"")}</textarea></label><label class="record-edit-field"><span>Teléfono de contacto *</span><input name="phone" type="tel" required autocomplete="tel" value="${escapeHtml(r.phone)}"></label><label class="record-edit-field"><span>Correo electrónico *</span><input name="email" type="email" required autocomplete="email" value="${escapeHtml(r.email)}"></label><div class="record-edit-actions"><button class="btn btn-secondary" type="button" data-cancel-record-edit>Cancelar</button><button class="btn btn-primary" type="submit">${icon("check")} Guardar cambios</button></div></form>`;return}
+    contacts.hidden=false;details.innerHTML=`<div class="detail-box wide"><span>Nombre o razón social</span><strong>${escapeHtml(r.taxpayerName)}</strong></div><div class="detail-box"><span>Número de recibo</span><strong>${escapeHtml(r.receiptNumber)}</strong></div><div class="detail-box"><span>Fecha / importe</span><strong>${formatReceiptDate(r.receiptDate)} · ${money(r.receiptAmount)}</strong></div><div class="detail-box wide"><span>Documentos</span><strong>${escapeHtml(r.documentDescription||"Sin descripción")}</strong></div><div class="detail-box"><span>Teléfono</span><strong>${escapeHtml(r.phone)}</strong></div><div class="detail-box"><span>Correo</span><strong>${escapeHtml(r.email)}</strong></div>`;contacts.innerHTML=`<a class="whatsapp-action" href="${escapeHtml(whatsappUrl(r))}" data-whatsapp="${r.folio}">${icon("message")} WhatsApp</a><a href="tel:${escapeHtml(r.phone.replace(/[^\d+]/g,""))}">${icon("phone")} Llamar</a><a href="#" data-email="${r.folio}" title="Enviar correo automático">${icon("mail")} Correo</a>`
   }
+  function openRecord(folioValue,{preserveEdit=false}={}){selectedFolio=folioValue;const r=findRecord(folioValue);if(!r)return;const keepForm=preserveEdit&&recordEditMode&&$("#record-modal-backdrop").classList.contains("open");if(!preserveEdit)recordEditMode=false;renderReception();$("#modal-folio").textContent=r.folio;$("#modal-created").textContent=`Registrado ${formatDate(r.createdAt)}`;$("#modal-status").innerHTML=statusPill(r.status);if(!keepForm)renderModalDetails(r);renderModalTimeline(r);renderActionPanel(r);if(!keepForm)$("#note-text").value="";$("#record-modal-backdrop").classList.add("open");document.body.classList.add("modal-open");if(!keepForm)setTimeout(()=>$("#close-modal").focus(),30)}
+  function toggleRecordEdit(){const r=findRecord(selectedFolio);if(!r)return;recordEditMode=!recordEditMode;renderModalDetails(r);if(recordEditMode)setTimeout(()=>$("#record-edit-form [name='taxpayerName']")?.focus(),20);else $("#edit-record").focus()}
+  function cancelRecordEdit(){const r=findRecord(selectedFolio);if(!r)return;recordEditMode=false;renderModalDetails(r);$("#edit-record").focus()}
+  function saveRecordEdits(event){event.preventDefault();const form=event.target,r=findRecord(selectedFolio);if(!r)return;if(!form.checkValidity()){form.reportValidity();return}const data=Object.fromEntries(new FormData(form).entries()),email=String(data.email||"").trim();if(!/^\S+@\S+\.\S+$/.test(email)){showToast("Ingresa un correo electrónico válido.","error");form.elements.email.focus();return}const next={taxpayerName:String(data.taxpayerName||"").trim(),receiptNumber:String(data.receiptNumber||"").trim(),receiptDate:String(data.receiptDate||"").trim(),receiptAmount:String(data.receiptAmount||"").trim(),documentDescription:String(data.documentDescription||"").trim(),phone:String(data.phone||"").trim(),email},labels={taxpayerName:"nombre o razón social",receiptNumber:"número de recibo",receiptDate:"fecha del recibo",receiptAmount:"importe",documentDescription:"documentos",phone:"teléfono",email:"correo"},changed=Object.keys(next).filter(key=>String(r[key]??"")!==next[key]);if(!changed.length){cancelRecordEdit();showToast("No se realizaron cambios.");return}Object.assign(r,next);const stamp=nowIso();r.updatedAt=stamp;r.events.push({id:uid(),type:"edicion",title:"Datos del registro corregidos",note:`Recepción actualizó: ${changed.map(key=>labels[key]).join(", ")}.`,actor:currentStaff(),createdAt:stamp});saveRecords();saveRecordToSheets(r,{requireAdmin:true}).then(ok=>{if(!ok)showToast("La corrección quedó solamente en la copia local.","error")});recordEditMode=false;renderReception();openRecord(r.folio,{preserveEdit:true});showToast("Datos actualizados correctamente.")}
   function renderModalTimeline(r){$("#modal-timeline").innerHTML=[...(r.events||[])].sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt)).map((e,i)=>`<li><span class="timeline-dot ${i===0?"latest":""}">${icon(i===0?"check":"clock")}</span><div><strong>${escapeHtml(e.title)}</strong><p>${escapeHtml(e.note)}</p><small>${formatDate(e.createdAt)} · ${escapeHtml(e.actor)}</small></div></li>`).join("")}
   function renderActionPanel(r){const panel=$("#action-panel");if(r.status==="registrado")panel.innerHTML=`<span>SIGUIENTE ACCIÓN</span><h3>Confirmar recepción</h3><p>Registra que los documentos físicos ya fueron recibidos en ventanilla.</p><button class="btn btn-primary" data-status-action="recibido">${icon("inbox")} Confirmar documentos recibidos</button>`;else if(r.status==="recibido")panel.innerHTML=`<span>SIGUIENTE ACCIÓN</span><h3>Preparar entrega</h3><p>Marca el expediente cuando los documentos estén disponibles para el contribuyente.</p><button class="btn btn-primary" data-status-action="listo">${icon("package")} Marcar listo para entrega</button>`;else if(r.status==="listo")panel.innerHTML=`<span>SIGUIENTE ACCIÓN</span><h3>Registrar entrega</h3><p>Confirma o modifica el nombre de quien recibe los documentos.</p><button class="btn btn-primary" id="show-delivery">${icon("check")} Registrar entrega</button><div class="delivery-box" id="delivery-box"><label class="compact-field"><span>Nombre de quien recibe *</span><input id="delivered-to" value="${escapeHtml(r.taxpayerName)}" placeholder="Nombre completo"></label><button class="btn btn-dark" data-status-action="entregado">Confirmar entrega</button></div>`;else panel.innerHTML=`<span>TRÁMITE FINALIZADO</span><h3>Documentos entregados</h3><p>Entregados a <strong>${escapeHtml(r.deliveredTo||"contribuyente")}</strong> el ${formatDate(r.deliveredAt)} por ${escapeHtml(r.deliveredBy||"Recepción")}.</p><button class="btn btn-secondary" disabled>${icon("check")} Entrega registrada</button>`}
 
@@ -522,7 +684,7 @@ function escapeHtml_(value) {
     if(status==="recibido"){title="Documentos recibidos";note="Recepción confirmó la entrega física de los documentos.";record.receivedAt=stamp;record.receivedBy=actor}
     if(status==="listo"){title="Documentos listos para entrega";note="Los documentos están disponibles para ser entregados al contribuyente.";if(!record.receivedAt){record.receivedAt=stamp;record.receivedBy=actor}record.readyAt=stamp}
     if(status==="entregado"){const who=String(deliveredTo||"").trim();if(!who)return false;title="Documentos entregados";note=`Los documentos fueron entregados a ${who}.`;record.deliveredAt=stamp;record.deliveredBy=actor;record.deliveredTo=who}
-    if(!title)return false;record.status=status;record.updatedAt=stamp;record.events.push({id:uid(),type:status,title,note,actor,createdAt:stamp});highlightedFolio=record.folio;saveRecords();sendAutomaticEmail(record);renderReception();if(reopenModal)openRecord(record.folio);showToast(title);return true;
+    if(!title)return false;record.status=status;record.updatedAt=stamp;const statusEvent={id:uid(),type:status,title,note,actor,createdAt:stamp};record.events.push(statusEvent);highlightedFolio=record.folio;saveRecords();saveRecordToSheets(record,{notifyEmail:true,emailEventId:statusEvent.id,requireAdmin:true}).then(ok=>{if(!ok)showToast("Cambio guardado en la copia local; falta conectar Google Sheets.","error")});renderReception();if(reopenModal)openRecord(record.folio);showToast(title);return true;
   }
   function updateStatus(status){const record=findRecord(selectedFolio);if(!record)return;let deliveredTo="";if(status==="entregado"){deliveredTo=$("#delivered-to")?.value.trim();if(!deliveredTo){showToast("Captura el nombre de quien recibe.","error");$("#delivered-to")?.focus();return}}applyStatusChange(record,status,{deliveredTo,reopenModal:true})}
   function advanceRecordFromTable(folioValue){const record=findRecord(folioValue);if(!record)return;if(record.status==="registrado"){applyStatusChange(record,"recibido");return}if(record.status==="recibido"){applyStatusChange(record,"listo");return}if(record.status==="listo"){openTableDelivery(record);return}showToast("Este registro ya está finalizado.")}
@@ -530,8 +692,8 @@ function escapeHtml_(value) {
   function openTableDelivery(record){pendingDeliveryFolio=record.folio;$("#table-delivery-summary").innerHTML=`Folio <strong>${escapeHtml(record.folio)}</strong> · ${escapeHtml(record.taxpayerName)}`;$("#table-delivered-to").value=record.taxpayerName||"";$("#table-delivery-backdrop").classList.add("open");updateModalLock();setTimeout(()=>{$("#table-delivered-to").focus();$("#table-delivered-to").select()},30)}
   function closeTableDelivery(){pendingDeliveryFolio=null;$("#table-delivery-backdrop").classList.remove("open");updateModalLock()}
   function confirmTableDelivery(event){event.preventDefault();const input=$("#table-delivered-to"),deliveredTo=input.value.trim();if(!deliveredTo){showToast("Captura el nombre de quien recibe.","error");input.focus();return}const record=findRecord(pendingDeliveryFolio);if(!record){closeTableDelivery();return}closeTableDelivery();applyStatusChange(record,"entregado",{deliveredTo})}
-  function addNote(text){const r=findRecord(selectedFolio);if(!r)return;const stamp=nowIso();r.events.push({id:uid(),type:"nota",title:"Actualización de recepción",note:text.trim(),actor:currentStaff(),createdAt:stamp});r.updatedAt=stamp;saveRecords();renderModalTimeline(r);showToast("Nota agregada al seguimiento.");}
-  function closeModal(){selectedFolio=null;$("#record-modal-backdrop").classList.remove("open");updateModalLock();renderReception()}
+  function addNote(text){const r=findRecord(selectedFolio);if(!r)return;const stamp=nowIso();r.events.push({id:uid(),type:"nota",title:"Actualización de recepción",note:text.trim(),actor:currentStaff(),createdAt:stamp});r.updatedAt=stamp;saveRecords();saveRecordToSheets(r,{requireAdmin:true}).then(ok=>{if(!ok)showToast("La nota quedó solamente en la copia local.","error")});renderModalTimeline(r);showToast("Nota agregada al seguimiento.");}
+  function closeModal(){recordEditMode=false;selectedFolio=null;$("#record-modal-backdrop").classList.remove("open");updateModalLock();renderReception()}
 
   function normalizeReceipt(value){return String(value||"").trim().replace(/\s+/g,"").toUpperCase()}
   function markReadyByReceipt(value){
@@ -542,7 +704,7 @@ function escapeHtml_(value) {
     if(!available.length){const message="Ese recibo ya fue entregado.";showToast(message,"error");return{ok:false,message}}
     if(available.length>1){const message="Hay más de un registro con ese recibo. Selecciónalo en la tabla.";showToast(message,"error");$("#staff-search").value=String(value).trim();$("#status-filter").value="all";renderReception();return{ok:false,message}}
     const record=available[0],wasReady=record.status==="listo",stamp=nowIso(),actor=currentStaff();
-    if(!wasReady){if(!record.receivedAt){record.receivedAt=stamp;record.receivedBy=actor}record.readyAt=stamp;record.status="listo";record.updatedAt=stamp;record.events.push({id:uid(),type:"listo",title:"Documentos listos para entrega",note:"Recepción confirmó mediante captura rápida del recibo que los documentos están disponibles para entrega.",actor,createdAt:stamp});saveRecords();sendAutomaticEmail(record)}
+    if(!wasReady){if(!record.receivedAt){record.receivedAt=stamp;record.receivedBy=actor}record.readyAt=stamp;record.status="listo";record.updatedAt=stamp;const statusEvent={id:uid(),type:"listo",title:"Documentos listos para entrega",note:"Recepción confirmó mediante captura rápida del recibo que los documentos están disponibles para entrega.",actor,createdAt:stamp};record.events.push(statusEvent);saveRecords();saveRecordToSheets(record,{notifyEmail:true,emailEventId:statusEvent.id,requireAdmin:true}).then(ok=>{if(!ok)showToast("Cambio guardado en la copia local; falta conectar Google Sheets.","error")})}
     const message=wasReady?`El recibo ya estaba listo: ${record.folio}`:`Listo para entrega: ${record.folio}`;
     highlightedFolio=record.folio;$("#status-filter").value="all";$("#staff-search").value="";renderReception();showToast(message);
     return{ok:true,message,record};
@@ -576,6 +738,8 @@ function escapeHtml_(value) {
   function setDefaultDate(){const input=$("#receipt-date");if(input&&!input.value){const d=new Date(),off=d.getTimezoneOffset();input.value=new Date(d.getTime()-off*60000).toISOString().slice(0,10)}}
 
   document.addEventListener("click",event=>{
+    if(event.target.closest("#edit-record")){toggleRecordEdit();return}
+    if(event.target.closest("[data-cancel-record-edit]")){cancelRecordEdit();return}
     const whatsapp=event.target.closest("[data-whatsapp]");if(whatsapp){event.preventDefault();const record=findRecord(whatsapp.dataset.whatsapp);if(record)openWhatsApp(record);return}
     const email=event.target.closest("[data-email]");if(email){event.preventDefault();const record=findRecord(email.dataset.email);if(record)sendAutomaticEmail(record);return}
     const metric=event.target.closest("[data-metric-filter]");if(metric){$("#status-filter").value=metric.dataset.metricFilter;$("#staff-search").value="";renderReception();$(".workspace-card").scrollIntoView?.({behavior:"smooth",block:"start"});return}
@@ -587,6 +751,8 @@ function escapeHtml_(value) {
     const action=event.target.closest("[data-status-action]");if(action){updateStatus(action.dataset.statusAction);return}
     if(event.target.closest("#show-delivery")){$("#delivery-box").classList.add("show");$("#delivered-to").focus();return}
   });
+  $("#records-body").addEventListener("dblclick",event=>{if(event.target.closest("[data-advance],[data-no-row]"))return;const row=event.target.closest("tr[data-folio]");if(row){event.preventDefault();event.stopPropagation();openRecord(row.dataset.folio)}});
+  $("#modal-details").addEventListener("submit",event=>{if(event.target.id==="record-edit-form")saveRecordEdits(event)});
   $("#registration-form").addEventListener("submit",handleRegistration);
   $("#quick-ready-form").addEventListener("submit",quickMarkReady);
   $("#open-quick-pip").addEventListener("click",openQuickReadyPip);
@@ -609,14 +775,15 @@ function escapeHtml_(value) {
   $("#export-csv").addEventListener("click",exportCsv);$("#close-modal").addEventListener("click",closeModal);$("#record-modal-backdrop").addEventListener("click",e=>{if(e.target===e.currentTarget)closeModal()});
   $("#cancel-table-delivery").addEventListener("click",closeTableDelivery);$("#table-delivery-backdrop").addEventListener("click",e=>{if(e.target===e.currentTarget)closeTableDelivery()});
   $("#note-form").addEventListener("submit",e=>{e.preventDefault();const text=$("#note-text").value;if(!text.trim())return;addNote(text);$("#note-text").value=""});
-  document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if($("#barcode-scanner-backdrop").classList.contains("open")){closeBarcodeScanner();return}if($("#email-settings-backdrop").classList.contains("open")){closeEmailSettings();return}if($("#table-delivery-backdrop").classList.contains("open")){closeTableDelivery();return}if($("#record-modal-backdrop").classList.contains("open"))closeModal()});window.addEventListener("hashchange",renderRoute);
-  window.addEventListener("storage",e=>{if(e.key===STORAGE_KEY)syncRecordsFromStorage(true)});
-  window.addEventListener("focus",()=>syncRecordsFromStorage(false));
+  document.addEventListener("keydown",e=>{const row=e.target.closest?.("tr[data-folio]");if(row&&(e.key==="Enter"||e.key===" ")&&!e.target.closest("button,a,input,select,textarea")){e.preventDefault();openRecord(row.dataset.folio);return}if(e.key!=="Escape")return;if($("#barcode-scanner-backdrop").classList.contains("open")){closeBarcodeScanner();return}if($("#email-settings-backdrop").classList.contains("open")){closeEmailSettings();return}if($("#table-delivery-backdrop").classList.contains("open")){closeTableDelivery();return}if($("#record-modal-backdrop").classList.contains("open"))closeModal()});window.addEventListener("hashchange",renderRoute);
+  window.addEventListener("storage",e=>{if(e.key===STORAGE_KEY)syncRecordsFromStorage(true);if(e.key===SERVICE_ENDPOINT_KEY||e.key===SHEETS_ADMIN_KEY){updateEmailConnectionUi();syncRecordsFromSheets(true,{force:true})}});
+  window.addEventListener("focus",()=>{syncRecordsFromStorage(false);if(!$("#view-reception").hidden)syncRecordsFromSheets(true,{force:true});else if(!$("#view-tracking").hidden&&$("#tracking-folio").value)searchTracking($("#tracking-folio").value)});
   window.addEventListener("pagehide",()=>{if(barcodeStream)closeBarcodeScanner({focusInput:false})});
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden)syncRecordsFromStorage(false)});
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden){syncRecordsFromStorage(false);if(!$("#view-reception").hidden)syncRecordsFromSheets(true,{force:true});else if(!$("#view-tracking").hidden&&$("#tracking-folio").value)searchTracking($("#tracking-folio").value)}});
   if(recordsChannel)recordsChannel.addEventListener("message",e=>{if(e.data?.type==="records-updated")syncRecordsFromStorage(true)});
+  setInterval(()=>{if(document.hidden)return;if(!$("#view-reception").hidden)syncRecordsFromSheets(true);else if(!$("#view-tracking").hidden&&$("#tracking-folio").value)searchTracking($("#tracking-folio").value)},10000);
 
-  (function init(){setDefaultDate();const staff=localStorage.getItem(STAFF_KEY)||"Recepción";$("#staff-name").value=staff;$("#staff-greeting-name").textContent=staff;$("#staff-avatar").textContent=staff.trim().charAt(0).toUpperCase()||"R";$("#today-label").textContent=new Intl.DateTimeFormat("es-MX",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(new Date());updateEmailConnectionUi();initStartQr();renderRoute()})();
+  (function init(){adoptServiceFromUrl();setDefaultDate();const staff=localStorage.getItem(STAFF_KEY)||"Recepción";$("#staff-name").value=staff;$("#staff-greeting-name").textContent=staff;$("#staff-avatar").textContent=staff.trim().charAt(0).toUpperCase()||"R";$("#today-label").textContent=new Intl.DateTimeFormat("es-MX",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(new Date());updateEmailConnectionUi();renderRoute()})();
   </script>
 </body>
 </html>
